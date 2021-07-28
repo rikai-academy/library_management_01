@@ -17,13 +17,13 @@ class CreateBooksTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->integer('quantity');
-            $table->string('desc');
-            $table->float('price');
+            $table->string('desc')->nullable();
+            $table->bigInteger('price');
             $table->string('image');
             $table->integer('publisher_id');
             $table->integer('category_id');
-            $table->integer('comment_id');
-            $table->integer('like_id');
+            $table->integer('comment_id')->nullable();
+            $table->integer('like_id')->nullable();
             $table->integer('author_id');
             $table->timestamps();
         });

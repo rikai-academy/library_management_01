@@ -11673,3 +11673,12 @@ body.sidebar-toggled footer.sticky-footer {
 .search_form {
     margin-top: 10px;
 }
+
+.image_add_book {
+    width: 205px;
+    height: 275px;
+}
+
+.button_image {
+    margin: 100px 0px 0px 130px;
+}

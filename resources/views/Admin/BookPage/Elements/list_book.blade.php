@@ -1,22 +1,22 @@
-{{-- For each --}}
+@foreach ($book_data as $book)
 <tr>
-    <td>ID Book</td>
-    <td>Name Book</td>
-    <td>Quanity Book</td>
-    <td>Price Book</td>
-    <td>Publisher Book</td>
-    <td>Cate Book</td>
-    <td>Author Book</td>
-    <td>Imgae Book</td>
-    <td>Action</td>
-    <td class="action">
-        <a href="" class="btn btn-info btn-icon-split action_button">
+    <td>{{$book->id}}</td>
+    <td>{{$book->name}}</td>
+    <td>{{$book->quantity}}</td>
+    <td>{{$book->price}}</td>
+    <td>{{$book->publisher->name}}</td>
+    <td>{{$book->category->name}}</td>
+    <td>{{$book->author->name}}</td>
+    <td><img style="width: 50px; height: 50px;" src="{{url('public/uploads/')}}/{{$book->image}}" alt=""></td> 
+    <td style="width: 214px;">
+        <a style="float: left" href="{{URL::to('book/'.$book->id.'/edit')}}"
+            class="btn btn-info btn-icon-split">
             <span class="icon text-white-50">
                 <i class="fas fa-info-circle"></i>
             </span>
             <span class="text">{{__('message.update_bnt')}}</span>
         </a>
-        <a href="#" class="btn btn-danger btn-icon-split action_button">
+        <a style="float: left" href="{{route('book.destroy',$book->id)}}" class="btn btn-danger btn-icon-split btndelete">
             <span class="icon text-white-50">
                 <i class="fas fa-trash"></i>
             </span>
@@ -24,3 +24,5 @@
         </a>
     </td>
 </tr>
+@endforeach
+

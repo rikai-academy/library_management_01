@@ -92,5 +92,9 @@
         'input_publisher'=>'Nhập Nhà Xuất Bản',
         'desc_publisher'=>'Mô Tả Nhà Xuất Bản',
         'publisher_list'=>'Danh Sách Nhà Xuất Bản',
+        'input_book'=>'Nhập Tên Sách',
+        'input_quantity'=>'Nhập Số Lượng Sách',
+        'desc_book'=>'Mô Tả Sách',
+        'price'=>'Giá Thuê',
     ]
 ?> 
