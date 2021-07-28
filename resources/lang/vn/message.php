@@ -40,6 +40,16 @@
         'cate_name'=>'Tên Danh Mục',
         'desc_cate'=>'Mô Tả Danh Mục',
         'cate_list'=>'Danh Sách Danh Mục',
-        'data_table'=>'Dữ Liệu'
+        'data_table'=>'Dữ Liệu',
+        'book_name'=>'Tên Sách',
+        'quantity'=>'Số Lượng',
+        'price'=>'Giá Sách',
+        'publisher_name'=>'Nhà Xuất Bản',
+        'category_name'=> 'Loại Sách',
+        'author_name'=>'Tác Giả',
+        'book_list'=> 'Danh Sách',
+        'add_book'=> 'Thêm Sách Mới',
+        'input_book'=> 'Nhập Tên Sách',
+        'input_desc_book'=>'Nhập Mô Tả Sách',
     ]
 ?>
