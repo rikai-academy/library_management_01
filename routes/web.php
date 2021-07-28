@@ -2,7 +2,13 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
+
 use Illuminate\Support\Facades\Auth;
+
+use App\Http\Controllers\Admin\UserController;
+use App\Http\Controllers\Admin\CategoryController;
+use App\Http\Controllers\Admin\BookController;
+use App\Http\Controllers\Admin\AuthorController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,4 +32,5 @@ Route::resources([
     'category' => 'Admin\CategoryController',
     'book' => 'Admin\BookController',
     'author' => 'Admin\AuthorController',
+    'publisher' => 'Admin\PublisherController',
 ]);
