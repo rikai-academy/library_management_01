@@ -40,4 +40,39 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function Role()
+    {
+        return $this->belongsTo("App\Models\Role", "role_id", "id");
+    }
+
+    public function BookFollow()
+    {
+        return $this->hasMany("App\Models\BookFollow", "user_id", "id");
+    }
+
+    public function AuthorFollow()
+    {
+        return $this->hasMany("App\Models\AuthorFollow", "user_id", "id");
+    }
+
+    public function Like()
+    {
+        return $this->hasMany("App\Models\Like", "user_id", "id");
+    }
+
+    public function Comment()
+    {
+        return $this->hasMany("App\Models\Comment", "user_id", "id");
+    }
+
+    public function Rate()
+    {
+        return $this->hasMany("App\Models\Rate", "user_id", "id");
+    }
+
+    public function BorrowedBook()
+    {
+        return $this->hasMany("App\Models\BorrowedBook", "user_id", "id");
+    }
 }
