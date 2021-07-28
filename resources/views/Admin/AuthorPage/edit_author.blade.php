@@ -8,5 +8,4 @@
         @include('Admin.AuthorPage.Elements.edit_form')
     </div>
 </div>
-
 @stop

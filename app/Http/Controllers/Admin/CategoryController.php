@@ -48,12 +48,12 @@ class CategoryController extends Controller
 
     public function update(CategoryRequest $request, Category $category)
     {
-        $cate_validation = $request->all();
+        $cate_validation = $request->except(['_method', '_token']);
 
         $cate_update = Category::where('id', $category->id)->update($cate_validation);
 
         if ($cate_update) {
-            return redirect()->route('category.edit', [$cate_update])->with('update_success', __('message.update_success'));
+            return redirect()->route('category.edit', [$category->id])->with('update_success', __('message.update_success'));
         } else {
             return back()->with('fail', __('message.fail'));
         }

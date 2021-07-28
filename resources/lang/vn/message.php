@@ -83,6 +83,8 @@
         'delete_success'=> 'Xóa Thành Công',
         'search_for'=> 'Tìm Kiếm Tên ...',
         'fail'=> 'Thao Tác Đã Có Lỗi',
+        'input_author'=>'Nhập Tên Tác Giả',
+        'desc_author'=>'Nhập Mô Tả Cho Tác Giả',
+        'export_excel'=>'Xuất File Excecl',
     ]
-?>
-
+?> 
