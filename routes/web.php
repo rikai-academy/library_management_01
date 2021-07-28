@@ -7,6 +7,8 @@ use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\BookController;
 use App\Http\Controllers\Admin\AuthorController;
+use App\Http\Controllers\Admin\PublisherController;
+use App\Models\Publisher;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,6 +28,7 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/author/export', [AuthorController::class, 'export'])->name('author.export');
+Route::get('/publisher/export', [PublisherController::class, 'export'])->name('publisher.export');
 Route::resources([
     'user' => 'Admin\UserController',
     'category' => 'Admin\CategoryController',
