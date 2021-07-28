@@ -9,8 +9,8 @@
         'list_user'=>'Danh sách người dùng',
         'add_user'=>'Thêm Người Dùng',
         'page2'=>'Quản Lý Danh Mục Sách',
-        'list_cate'=>'Danh sách người dùng',
-        'add_cate'=>'Thêm Người Dùng',
+        'list_cate'=>'Danh Mục',
+        'add_cate'=>'Thêm Danh Mục',
         'page3'=>'Quản Lý Sách',
         'list_book'=>'Danh Sách',
         'add_book'=>'Thêm Sách',
@@ -35,5 +35,11 @@
         'phone'=>'Số ĐT',
         'input_userName'=>'Nhập tên người dùng',
         'input_email'=>'Nhập email Người dùng',
+        'input_cate'=>'Nhập Tên Danh Mục',
+        'input_desc_cate'=>'Nhập Mô Tả Danh Mục',
+        'cate_name'=>'Tên Danh Mục',
+        'desc_cate'=>'Mô Tả Danh Mục',
+        'cate_list'=>'Danh Sách Danh Mục',
+        'data_table'=>'Dữ Liệu'
     ]
-?> 
+?>

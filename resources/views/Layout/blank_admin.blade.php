@@ -11,7 +11,7 @@
     <div id="wrapper">
 
         <!-- Sidebar -->
-            @include('Layout.Elements.menu')
+        @include('Layout.Elements.menu')
         <!-- End of Sidebar -->
 
         <!-- Content Wrapper -->
@@ -21,14 +21,14 @@
             <div id="content">
 
                 <!-- Topbar -->
-                    @include('Layout.Elements.nav')
+                @include('Layout.Elements.nav')
                 <!-- End of Topbar -->
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
 
                     @yield('main')
-                    
+
                 </div>
                 <!-- /.container-fluid -->
 
@@ -36,7 +36,7 @@
             <!-- End of Main Content -->
 
             <!-- Footer -->
-                @include('Layout.Elements.footer')
+            @include('Layout.Elements.footer')
             <!-- End of Footer -->
 
         </div>
