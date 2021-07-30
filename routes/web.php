@@ -30,7 +30,21 @@ Route::resources([
     'role' => 'RoleController',
     'star' => 'StarController',
 ]);
-
-Route::resources([
-    
-]);
+Route::get('/homepage', function () {
+    return view('layouts.user.homeuser');
+});
+Route::get('/detailbook', function () {
+    return view('layouts.user.detailbook');
+});
+Route::get('/detailauthor', function () {
+    return view('layouts.user.detailauthor');
+});
+Route::get('/rental', function () {
+    return view('layouts.user.rental');
+});
+Route::get('/contact', function () {
+    return view('layouts.user.contact');
+});
+Route::get('/profile', function () {
+    return view('layouts.user.profile');
+});
