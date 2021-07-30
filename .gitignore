@@ -13,3 +13,7 @@ npm-debug.log
 yarn-error.log
 /.idea
 /.vscode
+/public/css/userhome/style.css
+/public/js/userhome/functions.js
+/public/js/userhome/png-fix.js
+/public/js/userhome/script.js
