@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Book;
+use App\Models\Category;
+use App\Models\Author;
+use App\Models\Publisher;
 class ViewUserController extends Controller
 {
 	public function __construct()
@@ -17,9 +20,9 @@ class ViewUserController extends Controller
      */
     public function index()
     {
-        $userbooks = Book::orderBy('created_at','DESC')->paginate(9);
-        return view('layouts.user.homeuser',compact('userbooks'));
-		}
+        $userBooks = Book::orderBy('created_at','DESC')->paginate(9);
+        return view('layouts.user.homeuser',compact('userBooks'));
+    }
     /**
      * Display the specified resource.
      *
@@ -28,10 +31,8 @@ class ViewUserController extends Controller
      */
     public function show($id)
     {
-        $userbook = Book::find($id);
-        return view('layouts.user.detailbook',compact('userbook'));
-
+        $userBook = Book::with('author')->find($id);
+        $books = Book::orderBy('created_at','DESC')->take(7)->get();
+        return view('layouts.user.detailbook',compact('userBook','books'));
     }
-
-    
 }

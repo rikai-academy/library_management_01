@@ -5,7 +5,8 @@
  <table>
   <tr>
    <th id="items">{{__('public.img')}}</th>
-   <th id="items">{{__('public.name')}}</th><th id="items">{{__('public.quanity')}}</th>
+   <th id="items">{{__('public.name')}}</th>
+   <th id="items">{{__('public.quanity')}}</th>
    <th id="items">{{__('public.time_rent')}}</th>
    <th id="items">{{__('public.time_return')}}</th>
    <th id="items">{{__('public.price')}}</th>
