@@ -12,7 +12,25 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::resources([
+    'author' => 'AuthorController',
+    'authorFollow' => 'AuthorFollowController',
+    'book' => 'BookController',
+    'bookFollow' => 'BookFollowController',
+    'borrowed' => 'BorrowedBookController',
+    'category' => 'CategoryController',
+    'comment' => 'CommentController',
+    'like' => 'LikeController',
+    'publisher' => 'PublisherController',
+    'rate' => 'RateController',
+    'role' => 'RoleController',
+    'star' => 'StarController',
+]);
+
+Route::resources([
+    
+]);
