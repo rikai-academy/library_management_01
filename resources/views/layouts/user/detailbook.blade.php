@@ -61,59 +61,21 @@
 	<div id="main" class="shell">
 		<!-- Sidebar -->
 		<div id="sidebar">
-			<ul class="categories">
-				<li>
-					<h4>Categories</h4>
-						<nav>
-							<ul class="nav-menu nav-vertical" >
-								<li ><a href="#" class="nav-active" >Nav Link</a>
-									<ul>
-										<li><a href="#">Sub Nav Link</a>
-											<ul>
-												<li><a href="#">Sub Sub Nav Link</a></li>
-												<li><a href="#">Sub Sub Nav Link</a></li>
-												<li><a href="#">Sub Sub Nav Link</a></li>
-											</ul>
-										</li>
-									</ul>
-								</li>
-							</ul>
-						</nav>
-				</li>
-				<li>
-					<h4>Authors</h4>
-					<nav>
-						<ul class="nav-menu nav-vertical" >
-						    <li ><a href="#" class="nav-active" >Nav Link</a>
-								<ul>
-									<li><a href="#">Sub Nav Link</a>
-										<ul>
-											<li><a href="#">Sub Sub Nav Link</a></li>
-											<li><a href="#">Sub Sub Nav Link</a></li>
-											<li><a href="#">Sub Sub Nav Link</a></li>
-										</ul>
-									</li>
-								</ul>
-							</li>
-						</ul>
-					</nav>
-				</li>
-			</ul>
+				@include('layouts.user.content.menu')
 		</div>
 		<!-- End Sidebar -->
 		<!-- Content -->
 		<div id="content">
 			<!-- Products -->
 			<div class="products">
-				<h3>Book List</h3>
+				<h3>Book Detail</h3>
 				<div id="detail">
-				<img src="css/images/image02.jpg" alt="" id="detail-img">
+				<img id="detail-img" src="/css/userhome/images/{{$userbook->image}}">
 				<div id ="detail-content ">
-					<h1 id="font-1" >Những người thống khổ</h1>
+					<h1 id="font-1" >{{$userbook->name}}</h1>
 					<p id="detail-content-b">Author : sonha</p>
 					<p id="detail-content-b">Trích dẫn</p>
-					<p id="detail-content-p">Những Người Khốn Khổ là bức tranh của một xã hội Pháp thời bấy giờ. Nó đề cập đến những vấn đề lớn lao trong xã hội Pháp đầu thế kỷ XIX. Đó là một bản anh hùng ca của thời đại chống lại cường quyền, chống lại áp bức bóc lột. Đó là lòng thương sâu xa đối với những con người bị xã hội chà đạp. Giăng Vangiăng bị xã hội tư sản bóp nghẹt, chăng lưới bao vây, lùng bắt cho đến chết, vẫn sống một cuộc sống hy sinh cao quý vì những kẻ bị xã hội ruồng bỏ. Phăngtin bị xã hội đạp xuống, vẫn là một tâm hồn thanh cao, là một tấm gương sáng của tình mẹ con. Gavorốt là một đứa trẻ bị vứt bên lề đường Pari, vẫn là một tâm hồn thơ ngây, yêu đời, dũng cảm, nghĩa hiệp. Những nhân vật phản diện như Giave, Tênácđiê cũng được tác giả phản ánh rõ nét, nó tiêu biểu cho cái xã hội Pháp lúc bấy giờ.
-						Đọc lại Những Người Khốn Khổ hôm nay ta như thấy đâu đây khí thế cách mạng 1832 sống dậy tưng bừng, anh dũng và cảm phục một Pari nghèo khổ nhưng thiết tha yêu tự do.</p>
+					<p id="detail-content-p"> {{$userbook->desc}}</p>
 				</div>
 			</div>
 			<button class="button" style="float: right"><a href="" id="btn-a">RENT</a></button>
@@ -127,8 +89,8 @@
 					<li>
 						<div class="product">
 							<a href="#">
-								<img src="css/images/image-best01.jpg" alt="" />
-								<span class="book-name">Book Name </span>
+								<img src="css/userhome/images/{{$userbook->image}}" alt="" />
+								<span class="book-name">{{$userbook->name}}</span>
 								<span class="author">by John Smith</span>
 								
 							</a>

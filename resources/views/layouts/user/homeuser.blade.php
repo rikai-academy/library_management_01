@@ -61,46 +61,7 @@
 	<div id="main" class="shell">
 		<!-- Sidebar -->
 		<div id="sidebar">
-			<ul class="categories">
-				<li>
-					<h4>Categories</h4>
-						<nav>
-							<ul class="nav-menu nav-vertical" >
-								<li ><a href="#" class="nav-active" >Nav Link</a>
-								    <ul>
-										<li>
-                                            <a href="#">Sub Nav Link</a>
-											<ul>
-											    <li><a href="#">Sub Sub Nav Link</a></li>
-												<li><a href="#">Sub Sub Nav Link</a></li>
-												<li><a href="#">Sub Sub Nav Link</a></li>
-												</ul>
-											</li>
-										</ul>
-									</li>
-								</ul>
-							</nav>
-				</li>
-				<li>
-					<h4>Authors</h4>
-					<nav>
-						<ul class="nav-menu nav-vertical" >
-                            <li ><a href="#" class="nav-active" >Nav Link</a>
-								<ul>
-									<li>
-                                        <a href="#">Sub Nav Link</a>
-										<ul>
-											<li><a href="#">Sub Sub Nav Link</a></li>
-											<li><a href="#">Sub Sub Nav Link</a></li>
-											<li><a href="#">Sub Sub Nav Link</a></li>
-										</ul>
-									</li>
-								</ul>
-							</li>
-						</ul>
-					</nav>
-				</li>
-			</ul>
+			@include('layouts.user.content.menu')
 		</div>
 		<!-- End Sidebar -->
 		<!-- Content -->
@@ -109,18 +70,19 @@
 			<div class="products">
 				<h3>Book List</h3>
 				<ul>
-					<li>
+					@foreach($userbooks as $ubs)
+					<li> 
 						<div class="product">
-							<a href="detailbook.html" class="info">
-								<span class="holder">
-									<img src="css/images/image01.jpg" alt="" />
-									<span class="book-name">Book Name</span>
-									<span class="author">by John Smith</span>
-									<span class="description">Maecenas vehicula ante eu enim pharetra<br />scelerisque dignissim <br />sollicitudin nisi</span>
-								</span>
-							</a>
+									<a href="{{ route('homepage.show', $ubs->id) }}" class="info">
+										<span class="holder">
+											<img src="css/userhome/images/{{$ubs->image}}" alt="" />
+											<span class="book-name">{{$ubs->name}}</span>
+											<span class="description">{{$ubs->desc}}</span>
+										</span>
+									</a>
 						</div>
 					</li>
+					@endforeach
 				</ul>
 			<!-- End Products -->
 			</div>
@@ -129,15 +91,16 @@
 			<div id="best-sellers">
 				<h3>The most popular book</h3>
 				<ul>
+					@foreach($userbooks as $ubs)
 					<li>
 						<div class="product">
 							<a href="#">
-								<img src="css/images/image-best01.jpg" alt="" />
-								<span class="book-name">Book Name </span>
-								<span class="author">by John Smith</span>	
+								<img src="css/userhome/images/{{$ubs->image}}" alt="" />
+								<span class="book-name">{{$ubs->name}}</span>
 							</a>
 						</div>
 					</li>
+					@endforeach
 				</ul>
 			</div>
 			<!-- End Best-sellers -->
