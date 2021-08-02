@@ -11,8 +11,8 @@
   </li>
   <li> 
    <div class="search-container">
-    <form action="">
-     <input type="text" placeholder="{{__('public.input_here')}}" name="search">
+    <form action="{{url('/search')}}">
+     <input type="text" placeholder="{{__('public.input_here')}}" name="query">
      <button type="submit">
      {{__('public.search')}}
      </button>

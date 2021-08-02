@@ -68,5 +68,11 @@ class Book extends Model
             $query = $query->where('name','like','%'.$name.'%');
         }
         return $query;
-    }
+		}
+		public function scopeSearch($query){
+		 if(isset( $_GET['query'])){
+		 $search_text=$_GET['query'];
+		 return $query->where('name','LIKE','%'.$search_text.'%');
+		}
+	}
 }
