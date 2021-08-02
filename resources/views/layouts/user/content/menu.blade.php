@@ -3,8 +3,9 @@
             <h4>Categories</h4>
                 <nav>
                     <ul class="nav-menu nav-vertical" >
-                        <li ><a href="#" class="nav-active" >Nav Link</a>
-                            <ul>
+                        @foreach($menucategory as $mc)
+                    <li ><a href="/category/{{$mc->id}}" class="nav-active" >{{$mc->name}}</a>
+                            {{-- <ul>
                                 <li><a href="#">Sub Nav Link</a>
                                     <ul>
                                         <li><a href="#">Sub Sub Nav Link</a></li>
@@ -12,8 +13,10 @@
                                         <li><a href="#">Sub Sub Nav Link</a></li>
                                     </ul>
                                 </li>
-                            </ul>
+                            </ul> --}}
                         </li>
+                        @endforeach
+                      
                     </ul>
                 </nav>
         </li>
@@ -21,8 +24,9 @@
             <h4>Authors</h4>
             <nav>
                 <ul class="nav-menu nav-vertical" >
-                    <li ><a href="#" class="nav-active" >Nav Link</a>
-                        <ul>
+                    @foreach($menuauthor as $ma)
+                    <li ><a href="/author/{{$ma->id}}" class="nav-active" >{{$ma->name}}</a>
+                        {{-- <ul>
                             <li><a href="#">Sub Nav Link</a>
                                 <ul>
                                     <li><a href="#">Sub Sub Nav Link</a></li>
@@ -30,8 +34,9 @@
                                     <li><a href="#">Sub Sub Nav Link</a></li>
                                 </ul>
                             </li>
-                        </ul>
+                        </ul> --}}
                     </li>
+                    @endforeach
                 </ul>
             </nav>
         </li>

@@ -68,17 +68,17 @@
 		<div id="content">
 			<!-- Products -->
 			<div class="products">
-				<h3>Book List</h3>
+				<h3>Category : {{$getCategory->name}}</h3>
 				<ul>
-					@foreach($userbooks as $ubs)
+					@foreach($bookByCategory as $bc)
 					<li> 
 						<div class="product">
-									<a href="{{ route('homepage.show', $ubs->id) }}" class="info">
+									<a href="{{ route('homepage.show', $bc->id) }}" class="info">
 										<span class="holder">
-											<img src="/css/userhome/images/{{$ubs->image}}" alt="" />
-											<span class="book-name">{{$ubs->name}}</span>
-											<span class="book-name">by {{$ubs->author->name}}</span>
-											<span class="description">{{$ubs->desc}}</span>
+											<img src="/css/userhome/images/{{$bc->image}}" alt="" />
+											<span class="book-name">{{$bc->name}}</span>
+											<span class="book-name">by {{$bc->author->name}}</span>
+											<span class="description">{{$bc->desc}}</span>
 										</span>
 									</a>
 						</div>
@@ -88,23 +88,7 @@
 			<!-- End Products -->
 			</div>
 			<div class="cl">&nbsp;</div>
-			<!-- Best-sellers -->
-			<div id="best-sellers">
-				<h3>The most popular book</h3>
-				<ul>
-					@foreach($userbooks as $ubs)
-					<li>
-						<div class="product">
-							<a href="{{ route('homepage.show', $ubs->id) }}" class="info">
-								<img src="css/userhome/images/{{$ubs->image}}" alt="" />
-								<span class="book-name">{{$ubs->name}}</span>
-							</a>
-						</div>
-					</li>
-					@endforeach
-				</ul>
-			</div>
-			<!-- End Best-sellers -->
+			
 		</div>
 		<!-- End Content -->
 		<div class="cl">&nbsp;</div>

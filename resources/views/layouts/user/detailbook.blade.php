@@ -2,9 +2,9 @@
 <html lang="en-US" xmlns="http://www.w3.org/1999/xhtml" dir="ltr">
 @include('layouts.user.content.head')
 <body>
-	<!-- Header -->
+	
 	<div id="header" class="shell">
-		<div class="logo" ><h1><a href="" id="link" >LIBRARY DA NANG</a></h1></div>
+		<div class="logo" ><h1><a href="{{ route('homepage.index') }}" id="link" >LIBRARY DA NANG</a></h1></div>
 		<!-- Navigation -->
 		<div id="navigation">
 			<ul  >
@@ -22,16 +22,16 @@
 				</li>	
 			</ul>
 		</div>
-		<!-- End Navigation -->
+		
 		<div class="cl">&nbsp;</div>
-		<!-- Login-details -->
+		
 		<div id="login-details">
 			<p>Welcome, <a href="#" id="user">Guest</a> .</p>
 		</div>
-		<!-- End Login-details -->
+		
 	</div>
-	<!-- End Header -->
-	<!-- Slider -->
+	
+	
 	<div id="slider">
 		<div class="shell">
 			<ul>
@@ -73,7 +73,7 @@
 				<img id="detail-img" src="/css/userhome/images/{{$userbook->image}}">
 				<div id ="detail-content ">
 					<h1 id="font-1" >{{$userbook->name}}</h1>
-					<p id="detail-content-b">Author : sonha</p>
+				<p id="detail-content-b">Author : <a href="/author/{{$userbook->author->id}}"> {{$userbook->author->name}}</a> </p>
 					<p id="detail-content-b">Trích dẫn</p>
 					<p id="detail-content-p"> {{$userbook->desc}}</p>
 				</div>
@@ -86,17 +86,17 @@
 			<div id="best-sellers">
 				<h3>The most popular book</h3>
 				<ul>
-					<li>
-						<div class="product">
-							<a href="#">
-								<img src="css/userhome/images/{{$userbook->image}}" alt="" />
-								<span class="book-name">{{$userbook->name}}</span>
-								<span class="author">by John Smith</span>
-								
-							</a>
-						</div>
-					</li>
-				</ul>
+						@foreach($userbooks as $ubs)
+						<li>
+							<div class="product">
+								<a href="{{ route('homepage.show', $ubs->id) }}">
+									<img src="/css/userhome/images/{{$ubs->image}}" alt="" />
+									<span class="book-name">{{$ubs->name}}</span>
+								</a>
+							</div>
+						</li>
+						@endforeach
+					</ul>
 			</div>
 			<!-- End Best-sellers -->
 		</div>

@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ViewUserController;
+use App\Http\Controllers\ViewAuthorController;
+use App\Http\Controllers\ViewCategoryController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,3 +20,5 @@ Route::get('/', function () {
 
 
 Route::resource('homepage', ViewUserController::class);
+Route::get('/author/{author}', [ViewAuthorController::class, 'showDetail']);
+Route::get('/category/{category}', [ViewCategoryController::class, 'showCategory']);
