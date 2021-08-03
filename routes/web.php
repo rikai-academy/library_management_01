@@ -13,10 +13,12 @@ use App\Http\Controllers\AdminController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/', function () {
+    return view('welcome');
+});
+Auth::routes();
 
-
-Route::get('/admin', [AdminController::class, 'home'])->name('admin.home');
-
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::resources([
     'author' => 'AuthorController',
     'authorFollow' => 'AuthorFollowController',
@@ -32,6 +34,4 @@ Route::resources([
     'star' => 'StarController',
 ]);
 
-Route::resources([
-    
-]);
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
