@@ -51,5 +51,10 @@
         'add_book'=> 'Thêm Sách Mới',
         'input_book'=> 'Nhập Tên Sách',
         'input_desc_book'=>'Nhập Mô Tả Sách',
+        'input_author'=>'Nhập Tên Tác Giả',
+        'input_desc_author'=>'Mô Tả Tác Giả',
+        'add_author_new'=> 'Thêm Mới Tác Giả',
+        'author_list' => 'Danh Sách Tác Giả',
+        'author_desc'=> 'Mô Tả',
     ]
 ?>

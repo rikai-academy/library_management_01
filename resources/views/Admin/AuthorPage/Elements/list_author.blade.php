@@ -1,14 +1,8 @@
 {{-- For each --}}
 <tr>
-    <td>ID Book</td>
-    <td>Name Book</td>
-    <td>Quanity Book</td>
-    <td>Price Book</td>
-    <td>Publisher Book</td>
-    <td>Cate Book</td>
-    <td>Author Book</td>
-    <td>Imgae Book</td>
-    <td>Action</td>
+    <td>ID Author</td>
+    <td>Name Author</td>
+    <td>Desc Author</td>
     <td class="action">
         <a href="" class="btn btn-info btn-icon-split action_button">
             <span class="icon text-white-50">

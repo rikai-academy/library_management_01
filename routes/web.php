@@ -25,4 +25,5 @@ Route::resources([
     'user' => 'Admin\UserController',
     'category' => 'Admin\CategoryController',
     'book' => 'Admin\BookController',
+    'author' => 'Admin\AuthorController',
 ]);
