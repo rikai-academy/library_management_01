@@ -11660,3 +11660,7 @@ body.sidebar-toggled footer.sticky-footer {
     background-color: white;
     margin-left: 22%
 }
+
+.action {
+    width: 214px;
+}
