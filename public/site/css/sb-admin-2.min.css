@@ -11664,3 +11664,7 @@ body.sidebar-toggled footer.sticky-footer {
 .action {
     width: 214px;
 }
+
+.action_button {
+    float: left;
+}

@@ -6,9 +6,8 @@
         <div class="text-center">
             <h1 class="h4 text-gray-900 mb-4">{{__('message.update')}}</h1>
         </div>
-        @include('Admin.CategoryPage.Elements.edit_form')
+        @include('Admin.BookPage.Elements.edit_form')
     </div>
-
 </div>
 
 @stop
