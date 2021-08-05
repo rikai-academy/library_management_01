@@ -7,6 +7,5 @@
         </div>
         @include('Admin.UserPage.Elements.edit_form')
     </div>
-
 </div>
 @stop

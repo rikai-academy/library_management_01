@@ -111,8 +111,8 @@
         <div id="collapse7" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <h6 class="collapse-header">{{__('message.page_manager')}}:</h6>
-                <a class="collapse-item" href="blank.html">{{__('message.list_publisher')}}</a>
-                <a class="collapse-item" href="blank.html">{{__('message.add_publisher')}}</a>
+                <a class="collapse-item" href="{{route('publisher.index')}}">{{__('message.list_publisher')}}</a>
+                <a class="collapse-item" href="{{route('publisher.create')}}">{{__('message.add_publisher')}}</a>
             </div>
         </div>
     </li>
