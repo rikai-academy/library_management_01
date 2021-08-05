@@ -9,31 +9,13 @@
         </div>
 
         <!-- Navigation -->
-        <div id="navigation">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Profile</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Contacts</a></li>
-                <li>
-                    <div class="search-container">
-                        <form action="">
-                            <input type="text" placeholder="Search.." name="search" id="phon">
-                            <button type="submit"><i class="fa fa-search" id="phon"></i></button>
-                        </form>
-                    </div>
-                </li>
-
-            </ul>
-
-
-        </div>
+        @include('layouts.user.content.menubar')
 
         <!-- End Navigation -->
         <div class="cl">&nbsp;</div>
         <!-- Login-details -->
         <div id="login-details">
-            <p>Welcome, <a href="#" id="user">Guest</a> .</p>
+						@include('layouts.user.content.user')
 
         </div>
         <!-- End Login-details -->

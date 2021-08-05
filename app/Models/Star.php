@@ -13,5 +13,4 @@ class Star extends Model
     {
         return $this->hasMany("App\Models\Rate", "star_id", "id");
     }
-    
 }

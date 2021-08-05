@@ -1,9 +1,13 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ViewUserController;
 use App\Http\Controllers\ViewAuthorController;
 use App\Http\Controllers\ViewCategoryController;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\SearchController;
+use Illuminate\Support\Facades\Auth;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,11 +18,16 @@ use App\Http\Controllers\ViewCategoryController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', function () {
-    return view('welcome');
+Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
+Route::middleware(['auth'])->group(function () {
+	Route::get('/', 'ViewUserController@index');
+	Route::resource('/homepage', ViewUserController::class);
+	Route::get('/author/{author}', [ViewAuthorController::class, 'showDetail']);
+	Route::get('/category/{category}', [ViewCategoryController::class, 'showCategory']);
+	Route::get('/search',[SearchController::class,'search']);
 });
-
-
-Route::resource('homepage', ViewUserController::class);
-Route::get('/author/{author}', [ViewAuthorController::class, 'showDetail']);
-Route::get('/category/{category}', [ViewCategoryController::class, 'showCategory']);
+Route::get('/admin', [AdminController::class, 'home'])->name('admin.home');
+Auth::routes();
+Route::resources([
+    'user' => 'Admin\UserController',
+]);

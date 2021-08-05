@@ -17,3 +17,5 @@ yarn-error.log
 /public/js/userhome/functions.js
 /public/js/userhome/png-fix.js
 /public/js/userhome/script.js
+/resources/js/*
+/resources/css/*
