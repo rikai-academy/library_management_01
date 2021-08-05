@@ -35,7 +35,7 @@ class LoginController extends Controller
             return '/admin';
             break;
           case UserRole::USER:
-            return '/home';
+            return '/homepage';
             break;
         }
       }

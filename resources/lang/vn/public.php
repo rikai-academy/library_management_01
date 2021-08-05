@@ -40,5 +40,7 @@ return[
  'info'=>'Thông Tin Về Tác Giả',
  'author_book'=>'Những cuốn sách của tác giả',
  'result_search'=>'Kết Quả Trả Về :',
+ 'cmt'=>'Hiển Thị Bình Luận',
+ 'date_time'=>'Thời Gian :',
 ]
 ?>
