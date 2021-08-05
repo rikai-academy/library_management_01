@@ -22,7 +22,6 @@ class CreateBooksTable extends Migration
             $table->string('image');
             $table->integer('publisher_id');
             $table->integer('category_id');
-            $table->integer('comment_id');
             $table->integer('like_id');
             $table->integer('author_id');
             $table->timestamps();

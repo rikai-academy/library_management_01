@@ -6,6 +6,7 @@ use App\Http\Controllers\ViewCategoryController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\SearchController;
+use App\Http\Controllers\CommentUserController;
 use Illuminate\Support\Facades\Auth;
 
 /*
@@ -25,6 +26,7 @@ Route::middleware(['auth'])->group(function () {
 	Route::get('/author/{author}', [ViewAuthorController::class, 'showDetail']);
 	Route::get('/category/{category}', [ViewCategoryController::class, 'showCategory']);
 	Route::get('/search',[SearchController::class,'search']);
+	Route::post('/comment',[CommentUserController::class,'store']);
 });
 Route::get('/admin', [AdminController::class, 'home'])->name('admin.home');
 Auth::routes();

@@ -16,7 +16,7 @@ class Book extends Model
 
     public function comment()
     {
-        return $this->hasMany("App\Models\Comment", "comment_id", "id");
+        return $this->hasMany("App\Models\Comment");
     }
 
     public function publisher()

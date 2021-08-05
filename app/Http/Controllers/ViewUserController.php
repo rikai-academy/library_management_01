@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Book;
 use App\Models\Category;
 use App\Models\Author;
+use App\Models\Comment;
 class ViewUserController extends Controller
 {
 
@@ -39,10 +40,11 @@ class ViewUserController extends Controller
     public function show($id)
     {
         $userbook = Book::with('author')->find($id);
-        $userbooks = Book::all();
+				$userbooks = Book::all();
         $menucategory = Category::all();
-        $menuauthor = Author::all();
-        return view('layouts.user.detailbook',compact('userbook','userbooks','menucategory','menuauthor'));
+				$menuauthor = Author::all();
+				$comment = $userbook->comment;
+        return view('layouts.user.detailbook',compact('userbook','userbooks','menucategory','menuauthor','comment'));
 
     }
 
