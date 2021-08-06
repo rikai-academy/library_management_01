@@ -14,3 +14,4 @@
 <!-- Page level custom scripts -->
 <script src="{{url('public/site')}}/js/demo/chart-area-demo.js"></script>
 <script src="{{url('public/site')}}/js/demo/chart-pie-demo.js"></script>
+<script src="{{url('public/site')}}/js/detele_form.js"></script>

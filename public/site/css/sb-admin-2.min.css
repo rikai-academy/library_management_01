@@ -11668,3 +11668,7 @@ body.sidebar-toggled footer.sticky-footer {
 .action_button {
     float: left;
 }
+
+.search_form {
+    margin-top: 10px;
+}

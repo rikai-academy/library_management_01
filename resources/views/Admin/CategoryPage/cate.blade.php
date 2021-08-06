@@ -3,7 +3,6 @@
 @section('main')
 <!-- Begin Page Content -->
 <div class="container-fluid">
-
     <!-- Page Heading -->
     <h1 class="h3 mb-2 text-gray-800">{{__('message.cate_list')}}</h1>
     <!-- DataTales Example -->
@@ -19,12 +18,15 @@
         </div>
         <div class="card-body">
             <div class="table-responsive">
+                @include('Admin.CategoryPage.Elements.search_cate_form')
+                @include('Admin.CategoryPage.Elements.message')
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead>
                         <tr>
                             <th>{{__('message.id')}}</th>
                             <th>{{__('message.cate_name')}}</th>
                             <th>{{__('message.desc_cate')}}</th>
+                            <th>{{__('message.action')}}</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -34,8 +36,9 @@
             </div>
         </div>
     </div>
-
 </div>
 <!-- /.container-fluid -->
-
+<form method="POST" action="" id="form-delete">
+    @csrf @method('DELETE')
+</form> 
 @stop

@@ -11,8 +11,6 @@
         'page2'=>'Quản Lý Danh Mục Sách',
         'list_cate'=>'Danh Mục',
         'add_cate'=>'Thêm Danh Mục',
-        'list_cate'=>'Danh sách người dùng',
-        'add_cate'=>'Thêm Người Dùng',
         'page3'=>'Quản Lý Sách',
         'list_book'=>'Danh Sách',
         'add_book'=>'Thêm Sách',
@@ -77,5 +75,14 @@
         'add_publisher_new'=>'Thêm Nhà Xuất Bản Mới',
         'input_publisher'=>'Nhập Nhà Xuất Bản',
         'input_publisher_desc'=>'Nhập Mô Tả Nhà Xuất Bản',
+        'add_author_new'=>'Thêm Tác Giả Mới',
+        'input_cate'=>'Nhập Tên Danh Mục',
+        'desc_cate'=>'Mô Tả Danh Mục',
+        'success'=>'Thêm Mới Thành Công',
+        'update_success'=>'Cập Nhật Thành Công',
+        'delete_success'=> 'Xóa Thành Công',
+        'search_for'=> 'Tìm Kiếm Tên ...',
+        'fail'=> 'Thao Tác Đã Có Lỗi',
     ]
 ?>
+
