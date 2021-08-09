@@ -25,6 +25,7 @@ Route::get('/admin', [AdminController::class, 'home'])->name('admin.home');
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/author/export', [AuthorController::class, 'export'])->name('author.export');
 Route::resources([
     'user' => 'Admin\UserController',
     'category' => 'Admin\CategoryController',

@@ -1,6 +1,5 @@
 @extends('Layout.blank_admin')
 @section('main')
-
 <div class="col-lg-7 add_form">
     <div class="p-5">
         <div class="text-center">
