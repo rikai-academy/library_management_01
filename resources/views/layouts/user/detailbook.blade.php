@@ -58,9 +58,39 @@
 				<img id="detail-img" src="/css/userhome/images/{{$userbook->image}}">
 				<div id ="detail-content ">
 					<h1 id="font-1" >{{$userbook->name}}</h1>
+					<br>
+					<div style="display:flex">
+						
+						
+							
+						<div style="display:flex">	
+							
+								<p> <i class="fas fa-thumbs-up"></i> : {{$likes}}</p> &emsp;
+								<p><i class="fas fa-thumbs-down"></i> : {{$dislikes}}</p>
+							</div>
+							&ensp;
+							<div><form action="{{url('/save-likedislike')}}" method="POST" >
+								<input type="hidden" name="_token" value="{{ csrf_token() }}">				
+								<input type="hidden" name="book_id" value="{{$userbook->id}}">	
+							@if ($checkfirst)
+							<input type="submit" name='choice'  value="Like"  />
+							<input type="submit" name='choice'  value="disLike" />
+							
+							@else
+								@if ($check)
+								<input type="submit" name='choice'  value="disLike"/>
+								<i ></i>
+								@else
+								<input type="submit" name='choice' value="Like"/>
+								
+								@endif
+							@endif
+								</form></div>
+					</div>
+					
 				<p id="detail-content-b">Author : <a href="/author/{{$userbook->author->id}}"> {{$userbook->author->name}}</a> </p>
-					<p id="detail-content-b">Trích dẫn</p>
-					<p id="detail-content-p"> {{$userbook->desc}}</p>
+					<p id="detail-content-b">Trích dẫn :  {{$userbook->desc}}</p>
+				
 				</div>
 			</div>
 			<button class="button" style="float: right"><a href="" id="btn-a">RENT</a></button>
@@ -126,4 +156,5 @@
 	@include('layouts.user.content.footer')
 	<!-- End Footer -->
 </body>
+
 </html>

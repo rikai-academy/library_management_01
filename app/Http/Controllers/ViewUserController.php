@@ -7,6 +7,8 @@ use App\Models\Book;
 use App\Models\Category;
 use App\Models\Author;
 use App\Models\Comment;
+use App\Models\Like;
+use DB;
 class ViewUserController extends Controller
 {
 
@@ -41,12 +43,26 @@ class ViewUserController extends Controller
     {
         $userbook = Book::with('author')->find($id);
 				$userbooks = Book::all();
+				$check = null;
+				$checkfirst = null;
         $menucategory = Category::all();
 				$menuauthor = Author::all();
 				$comment = $userbook->comment;
-        return view('layouts.user.detailbook',compact('userbook','userbooks','menucategory','menuauthor','comment'));
+				$likes = Like::SumLike($id);
+				$dislikes = Like::SumDislike($id);
+				if(Like::CheckLike($id)->exists()) {
+						$check=true;
+						$checkfirst=false;
+				}else if(Like::CheckDislike($id)->exists()) {
+					$check=false;
+					$checkfirst=false;
+				}
+				else{
+					$checkfirst=true;
+				}
+        return view('layouts.user.detailbook',compact('userbook','userbooks','menucategory','menuauthor','comment','likes','dislikes','check','checkfirst'));
 
     }
-
-    
+		
+   
 }

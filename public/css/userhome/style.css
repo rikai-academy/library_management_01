@@ -1195,3 +1195,8 @@ textarea.form-control {
 .comment-space{
 	margin-top: 5px;
 }
+#icon{
+    background-image:url(/public/css/userhome/images/image06.jpg); 
+    background-repeat: no-repeat; 
+    background-position: 2px 3px;
+}

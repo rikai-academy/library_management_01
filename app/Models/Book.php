@@ -24,10 +24,17 @@ class Book extends Model
         return $this->belongsTo("App\Models\Publisher", "publisher_id", "id");
     }
 
-    public function likeBook()
-    {
-        return $this->hasMany("App\Models\Like", "like_id", "id");
-    }
+    // public function likeBook()
+    // {
+    //     return $this->hasMany("", "like_id", "id");
+		// }
+		public function likes(){
+			return $this->hasMany("App\Models\Like","book_id")->sum('like');
+	}
+	
+	public function dislikes(){
+			return $this->hasMany("App\Models\Like","book_id")->sum('dislike');
+	}
 
     public function Author()
     {
