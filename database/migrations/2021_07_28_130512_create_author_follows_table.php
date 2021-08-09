@@ -13,12 +13,13 @@ class CreateAuthorFollowsTable extends Migration
      */
     public function up()
     {
-        Schema::create('author_follows', function (Blueprint $table) {
-            $table->increments('id');
-            $table->integer('author_id');
-            $table->integer('user_id');
-            $table->timestamps();
-        });
+     Schema::create('author_follows', function (Blueprint $table) {
+      $table->increments('id');
+      $table->integer('author_id');
+			$table->integer('user_id');
+			$table->integer('follow')->default(0);
+      $table->timestamps();
+     });
     }
 
     /**
@@ -28,6 +29,6 @@ class CreateAuthorFollowsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('author_follows');
+     Schema::dropIfExists('author_follows');
     }
 }

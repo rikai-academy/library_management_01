@@ -42,5 +42,7 @@ return[
  'result_search'=>'Kết Quả Trả Về :',
  'cmt'=>'Hiển Thị Bình Luận',
  'date_time'=>'Thời Gian :',
+ 'like'=>'Yêu thích : ',
+ 'dislike'=>'Không thích : ',
 ]
 ?>

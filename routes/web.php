@@ -16,8 +16,8 @@ use App\Http\Controllers\ViewCategoryController;
 use App\Http\Controllers\ViewPublisherController;
 use App\Http\Controllers\SearchController;
 use App\Http\Controllers\CommentUserController;
-
-
+use App\Http\Controllers\ViewUserController;
+use App\Http\Controllers\LikeBookController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -80,4 +80,3 @@ Route::prefix('/admin')->group(function () {
         Route::get('admin/borrow/accept_book_all/{user_id}', [BorrowBookController::class, 'accept_book_all'])->name('borrow.accept_book_all');
     });
 });
-
