@@ -86,5 +86,11 @@
         'input_author'=>'Nhập Tên Tác Giả',
         'desc_author'=>'Nhập Mô Tả Cho Tác Giả',
         'export_excel'=>'Xuất File Excecl',
+        'input_author'=>'Nhập Tên Tác Giả',
+        'desc_author'=>'Nhập Mô Tả Cho Tác Giả',
+        'export_excel'=>'Xuất File Excecl',
+        'input_publisher'=>'Nhập Nhà Xuất Bản',
+        'desc_publisher'=>'Mô Tả Nhà Xuất Bản',
+        'publisher_list'=>'Danh Sách Nhà Xuất Bản',
     ]
 ?> 
