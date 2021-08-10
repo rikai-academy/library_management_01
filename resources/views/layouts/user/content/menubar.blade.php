@@ -1,8 +1,8 @@
 <div id="navigation">
 		<ul>
-			<li><a href="#" class="active">Home</a></li>
-			<li><a href="#">Rental</a></li>
-			<li><a href="#">Contacts</a></li>
+			<li><a href="{{ route('homepage.index') }}" ><b>Home</b> </a></li>
+		<li><a href="{{url('/rent')}}">Rental</a></li>
+			<li><a href="{{url('/contact')}}">Contacts</a></li>
 			<li> 
 				<div class="search-container">
 				<form action="{{url('/search')}}" method="get">

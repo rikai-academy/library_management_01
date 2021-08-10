@@ -52,12 +52,38 @@
 				<div class="products">
 						<h3> About Author </h3>
 					 
+								
 						
 						<div id ="detail-content ">
 							<br>
 								<h1 id="font-1" >Name : {{$Getauthor->name}}</h1>   
 								<br>
+								<div style="display:flex">
+									<div >	
+							
+									<p><i class="fas fa-user-friends"></i>  : {{$follows}} </p> 
+									
+								</div>
+								&nbsp; &nbsp;
+								<div><form action="{{url('/author-fl')}}" method="POST" >
+									<input type="hidden" name="_token" value="{{ csrf_token() }}">				
+									<input type="hidden" name="author_id" value="{{$Getauthor->id}}">	
+								@if ($checkfirst)
+								<input type="submit" name='choice'  value="Follow"  />
+								<input type="submit" name='choice'  value="UnFollow" />
 								
+								@else
+									@if ($check)
+									<input type="submit" name='choice'  value="UnFollow"/>
+									<i ></i>
+									@else
+									<input type="submit" name='choice' value="Follow"/>
+									
+									@endif
+								@endif
+									</form></div></div>
+								
+									<br>
 								<b id="detail-content-p">Description : {{$Getauthor->desc}}</b>
 						</div>
 				

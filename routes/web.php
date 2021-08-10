@@ -8,6 +8,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\SearchController;
 use App\Http\Controllers\CommentUserController;
 use App\Http\Controllers\LikeBookController;
+use App\Http\Controllers\FlAuthorController;
 use Illuminate\Support\Facades\Auth;
 
 /*
@@ -29,6 +30,13 @@ Route::middleware(['auth'])->group(function () {
 	Route::get('/search',[SearchController::class,'search']);
 	Route::post('/comment',[CommentUserController::class,'store']);
 	Route::post('/save-likedislike',[LikeBookController::class,'save_likedislike']);
+	Route::post('/author-fl',[FlAuthorController::class,'save_flunfl']);
+});
+Route::get('/rent', function () {
+	return view('layouts.user.rental');
+});
+Route::get('/contact', function () {
+	return view('layouts.user.contact');
 });
 Route::get('/admin', [AdminController::class, 'home'])->name('admin.home');
 Auth::routes();

@@ -17,6 +17,7 @@ class CreateBookFollows extends Migration
 					$table->increments('id');
 					$table->integer('book_id');
 					$table->integer('user_id');
+					$table->integer('follow')->default(0);
 					$table->timestamps();
         });
     }

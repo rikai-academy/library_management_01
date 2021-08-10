@@ -11,12 +11,13 @@ class Author extends Model
 
     public function Follow()
     {
-        return $this->hasMany("App\Models\AuthorFollow", "author_id", "id");
+        return $this->hasMany("App\Models\AuthorFollow", "author_id", "id")->sum('follow');
     }
 
     public function Book()
     {
         return $this->hasMany("App\Models\Book", "author_id", "id");
     }
-
+		
+	
 }

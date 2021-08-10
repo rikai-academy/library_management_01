@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Like;
 use App\Models\Book;
-use DB;
+
 class LikeBookController extends Controller
 {
 	function save_likedislike(Request $request){

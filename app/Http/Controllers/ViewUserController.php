@@ -8,6 +8,7 @@ use App\Models\Category;
 use App\Models\Author;
 use App\Models\Comment;
 use App\Models\Like;
+use App\Models\Publisher;
 use DB;
 class ViewUserController extends Controller
 {
@@ -30,8 +31,9 @@ class ViewUserController extends Controller
     {
         $userbooks = Book::orderBy('created_at','DESC')->paginate(9);
         $menucategory = Category::all();
-        $menuauthor = Author::all();
-        return view('layouts.user.homeuser',compact('userbooks','menucategory','menuauthor'));
+				$menuauthor = Author::all();
+				$menuPublisher = Publisher::all();
+        return view('layouts.user.homeuser',compact('userbooks','menucategory','menuauthor','menuPublisher'));
     }
     /**
      * Display the specified resource.
@@ -47,6 +49,7 @@ class ViewUserController extends Controller
 				$checkfirst = null;
         $menucategory = Category::all();
 				$menuauthor = Author::all();
+				$menuPublisher = Publisher::all();
 				$comment = $userbook->comment;
 				$likes = Like::SumLike($id);
 				$dislikes = Like::SumDislike($id);
@@ -60,7 +63,7 @@ class ViewUserController extends Controller
 				else{
 					$checkfirst=true;
 				}
-        return view('layouts.user.detailbook',compact('userbook','userbooks','menucategory','menuauthor','comment','likes','dislikes','check','checkfirst'));
+        return view('layouts.user.detailbook',compact('userbook','userbooks','menucategory','menuauthor','menuPublisher','comment','likes','dislikes','check','checkfirst'));
 
     }
 		

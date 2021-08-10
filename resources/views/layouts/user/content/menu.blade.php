@@ -26,18 +26,20 @@
                 <ul class="nav-menu nav-vertical" >
                     @foreach($menuauthor as $ma)
                     <li ><a href="/author/{{$ma->id}}" class="nav-active" >{{$ma->name}}</a>
-                        {{-- <ul>
-                            <li><a href="#">Sub Nav Link</a>
-                                <ul>
-                                    <li><a href="#">Sub Sub Nav Link</a></li>
-                                    <li><a href="#">Sub Sub Nav Link</a></li>
-                                    <li><a href="#">Sub Sub Nav Link</a></li>
-                                </ul>
-                            </li>
-                        </ul> --}}
                     </li>
                     @endforeach
                 </ul>
             </nav>
-        </li>
+				</li>
+				<li>
+					<h4>Publishers</h4>
+					<nav>
+							<ul class="nav-menu nav-vertical" >
+									@foreach($menuPublisher as $mp)
+									<li ><a href="{{$mp->id}}" class="nav-active" >{{$mp->name}}</a>
+									</li>
+									@endforeach
+							</ul>
+					</nav>
+			</li>
     </ul>

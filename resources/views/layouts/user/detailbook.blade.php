@@ -74,11 +74,11 @@
 								<input type="hidden" name="book_id" value="{{$userbook->id}}">	
 							@if ($checkfirst)
 							<input type="submit" name='choice'  value="Like"  />
-							<input type="submit" name='choice'  value="disLike" />
+							<input type="submit" name='choice'  value="DisLike" />
 							
 							@else
 								@if ($check)
-								<input type="submit" name='choice'  value="disLike"/>
+								<input type="submit" name='choice'  value="DisLike"/>
 								<i ></i>
 								@else
 								<input type="submit" name='choice' value="Like"/>

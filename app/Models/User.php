@@ -53,7 +53,7 @@ class User extends Authenticatable
 
     public function AuthorFollow()
     {
-        return $this->hasMany("App\Models\AuthorFollow", "user_id", "id");
+        return $this->hasMany("App\Models\AuthorFollow", "user_id");
     }
 
     public function Like()
