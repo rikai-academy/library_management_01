@@ -9,7 +9,8 @@ use App\Models\Author;
 use App\Models\Comment;
 use App\Models\Like;
 use App\Models\Publisher;
-use DB;
+use App\Models\BookFollow;
+
 class ViewUserController extends Controller
 {
 
@@ -45,12 +46,14 @@ class ViewUserController extends Controller
     {
         $userbook = Book::with('author')->find($id);
 				$userbooks = Book::all();
-				$check = null;
-				$checkfirst = null;
-        $menucategory = Category::all();
+				$menucategory = Category::all();
 				$menuauthor = Author::all();
 				$menuPublisher = Publisher::all();
 				$comment = $userbook->comment;
+				$check = null;
+				$checkfirst = null;
+				$checkFl=null;
+				$check1=null;
 				$likes = Like::SumLike($id);
 				$dislikes = Like::SumDislike($id);
 				if(Like::CheckLike($id)->exists()) {
@@ -63,7 +66,18 @@ class ViewUserController extends Controller
 				else{
 					$checkfirst=true;
 				}
-        return view('layouts.user.detailbook',compact('userbook','userbooks','menucategory','menuauthor','menuPublisher','comment','likes','dislikes','check','checkfirst'));
+				$follows = BookFollow::SumFollow($id);
+			if(BookFollow::CheckFollow($id)->exists()) {
+				$checkFl=true;
+				$check1=false;
+			}else if(BookFollow::CheckUnFollow($id)->exists()) {
+				$checkFl=false;
+				$check1=false;
+			}
+			else{
+				$check1=true;
+			}
+        return view('layouts.user.detailbook',compact('userbook','userbooks','menucategory','menuauthor','menuPublisher','comment','likes','dislikes','follows','check','checkfirst','checkFl','check1'));
 
     }
 		

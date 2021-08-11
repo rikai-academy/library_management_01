@@ -451,7 +451,6 @@ textarea {
 	font-size: 12px;
 	line-height: 20px;
 	color: #0182b5;
-	font-family: 'Georgia', Arial, serif;
 	display: block;
 }
 
@@ -899,7 +898,7 @@ textarea {
 #font-1 {
 	font-family: "Times New Roman", Times, serif;
 	font-weight: bold;
-	font-size: 30px;
+	font-size: 23px;
 	color: red;
 }
 

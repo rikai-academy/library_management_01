@@ -63,7 +63,7 @@
 											<img src="/css/userhome/images/{{$bc->image}}" alt="" />
 											<span class="book-name">{{$bc->name}}</span>
 											<span class="book-name">by {{$bc->author->name}}</span>
-											<span class="description">{{$bc->desc}}</span>
+									
 										</span>
 									</a>
 						</div>

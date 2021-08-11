@@ -50,7 +50,7 @@ class Book extends Model
 
     public function Follow()
     {
-        return $this->hasMany("App\Models\BookFollow", "book_id", "id");
+        return $this->hasMany("App\Models\BookFollow", "book_id")->sum('follow');
     }
     
 }

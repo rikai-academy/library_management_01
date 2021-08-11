@@ -87,6 +87,31 @@
 							@endif
 								</form></div>
 					</div>
+					<br>
+					<div style="display:flex">
+						<div >	
+				
+						<p><i class="fas fa-user-friends"></i>  : {{$follows}} </p> 
+						
+					</div>
+					&nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; 
+					<div><form action="{{url('/book-fl')}}" method="POST" >
+						<input type="hidden" name="_token" value="{{ csrf_token() }}">				
+						<input type="hidden" name="book_id" value="{{$userbook->id}}">	
+					@if ($check1)
+					<input type="submit" name='choiceFl'  value="Follow"  />
+					
+					
+					@else
+						@if ($checkFl)
+						<input type="submit" name='choiceFl'  value="UnFollow"/>
+						<i ></i>
+						@else
+						<input type="submit" name='choiceFl' value="Follow"/>
+						
+						@endif
+					@endif
+						</form></div></div>
 					
 				<p id="detail-content-b">Author : <a href="/author/{{$userbook->author->id}}"> {{$userbook->author->name}}</a> </p>
 					<p id="detail-content-b">Trích dẫn :  {{$userbook->desc}}</p>

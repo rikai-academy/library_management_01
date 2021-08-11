@@ -9,6 +9,7 @@ use App\Http\Controllers\SearchController;
 use App\Http\Controllers\CommentUserController;
 use App\Http\Controllers\LikeBookController;
 use App\Http\Controllers\FlAuthorController;
+use App\Http\Controllers\FlBookController;
 use Illuminate\Support\Facades\Auth;
 
 /*
@@ -31,6 +32,7 @@ Route::middleware(['auth'])->group(function () {
 	Route::post('/comment',[CommentUserController::class,'store']);
 	Route::post('/save-likedislike',[LikeBookController::class,'save_likedislike']);
 	Route::post('/author-fl',[FlAuthorController::class,'save_flunfl']);
+	Route::post('/book-fl',[FlBookController::class,'book_flunfl']);
 });
 Route::get('/rent', function () {
 	return view('layouts.user.rental');

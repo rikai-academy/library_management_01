@@ -70,7 +70,7 @@
 									<input type="hidden" name="author_id" value="{{$Getauthor->id}}">	
 								@if ($checkfirst)
 								<input type="submit" name='choice'  value="Follow"  />
-								<input type="submit" name='choice'  value="UnFollow" />
+							
 								
 								@else
 									@if ($check)

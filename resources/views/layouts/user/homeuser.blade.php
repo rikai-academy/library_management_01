@@ -64,7 +64,7 @@
 											<img src="/css/userhome/images/{{$ubs->image}}" alt="" />
 											<span class="book-name">{{$ubs->name}}</span>
 											<span class="book-name">by {{$ubs->author->name}}</span>
-											<span class="description">{{$ubs->desc}}</span>
+											
 										</span>
 									</a>
 						</div>
