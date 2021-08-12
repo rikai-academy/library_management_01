@@ -9,6 +9,18 @@ class Book extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'name',
+        'quantity',
+        'price',
+        'publisher_id',
+        'category_id',
+        'author_id',
+        'image',
+        'desc',
+    ];
+
+
     public function category()
     {
         return $this->belongsTo("App\Models\Category", "category_id", "id");
@@ -49,5 +61,12 @@ class Book extends Model
         return $this->hasMany("App\Models\BookFollow", "book_id", "id");
     }
     
+    public function scopeLoadByNameBook($query)
+    {
+        if($name = request()->name){
+            $query = $query->where('name','like','%'.$name.'%');
+        }
+        return $query;
+    }
 }
 

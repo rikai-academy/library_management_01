@@ -29,6 +29,7 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/author/export', [AuthorController::class, 'export'])->name('author.export');
 Route::get('/publisher/export', [PublisherController::class, 'export'])->name('publisher.export');
+Route::get('/book/export', [BookController::class, 'export'])->name('book.export');
 Route::resources([
     'user' => 'Admin\UserController',
     'category' => 'Admin\CategoryController',
