@@ -23,7 +23,7 @@
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead>
                         <tr>
-                            <th>{{__('message.id')}}</th>
+                            <th>{{__('message.stt')}}</th>
                             <th>{{__('message.publisher_name')}}</th>
                             <th>{{__('message.desc')}}</th>
                             <th>{{__('message.action')}}</th>

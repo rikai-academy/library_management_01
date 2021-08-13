@@ -16,7 +16,7 @@ class CategoryRequest extends FormRequest
         return [
             'name'=>[
                 'required',
-                'unique:categories'
+                'unique:categories,name,'.$this->id.'',
             ]
         ];
     }
