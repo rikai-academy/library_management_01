@@ -1,10 +1,10 @@
 @foreach ($data_publisher as $publisher)
 <tr>
-    <td>{{$publisher->id}}</td>
+    <td>{{$loop->iteration}}</td>
     <td>{{$publisher->name}}</td>
     <td>{{$publisher->desc}}</td>
     <td style="width: 214px;">
-        <a style="float: left" href="{{URL::to('publisher/'.$publisher->id.'/edit')}}" class="btn btn-info btn-icon-split">
+        <a style="float: left" href="{{route('publisher.edit',$publisher->id)}}" class="btn btn-info btn-icon-split">
             <span class="icon text-white-50">
                 <i class="fas fa-info-circle"></i>
             </span>

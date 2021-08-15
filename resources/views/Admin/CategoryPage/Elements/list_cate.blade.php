@@ -1,10 +1,10 @@
 @foreach ($data_cate as $cate)
 <tr>
-    <td>{{$cate->id}}</td>
+    <td>{{$loop->iteration}}</td>
     <td>{{$cate->name}}</td>
     <td>{{$cate->desc}}</td>
     <td style="width: 214px;">
-        <a style="float: left" href="{{URL::to('category/'.$cate->id.'/edit')}}"
+        <a style="float: left" href="{{route('category.edit',$cate->id)}}"
             class="btn btn-info btn-icon-split">
             <span class="icon text-white-50">
                 <i class="fas fa-info-circle"></i>

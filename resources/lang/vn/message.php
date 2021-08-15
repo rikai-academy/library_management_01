@@ -96,5 +96,9 @@
         'input_quantity'=>'Nhập Số Lượng Sách',
         'desc_book'=>'Mô Tả Sách',
         'price'=>'Giá Thuê',
+        'stt'=> 'STT',
+        'logout'=>'Đăng Xuất',
+        'profile'=> 'Hồ Sơ',
+        'setting'=> 'Chỉnh Sửa',
     ]
 ?> 

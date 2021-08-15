@@ -1,4 +1,4 @@
-<form class="user" action="{{url('category')}}" method="POST">
+<form class="user" action="{{route('category.store')}}" method="POST">
     @include('Admin.CategoryPage.Elements.message')
      @csrf
     <div class="form-group">

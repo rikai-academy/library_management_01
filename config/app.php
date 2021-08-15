@@ -177,6 +177,7 @@ return [
         App\Providers\RouteServiceProvider::class,
         App\Providers\BookServiceProvider::class,
         App\Providers\UploadImageServiceProvider::class,
+        BenSampo\Enum\EnumServiceProvider::class,
     ],
 
     /*

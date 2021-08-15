@@ -16,7 +16,7 @@ class PublisherRequest extends FormRequest
         return [
             'name' => [
                 'required',
-                'unique:publishers'
+                'unique:publishers,name,'.$this->id.'',
             ]
         ];
     }

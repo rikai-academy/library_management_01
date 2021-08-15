@@ -16,7 +16,6 @@ class AuthorRequest extends FormRequest
         return [
             'name'=>[
                 'required',
-                'unique:authors'
             ]
         ];
     }

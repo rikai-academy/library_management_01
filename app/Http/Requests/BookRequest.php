@@ -17,7 +17,6 @@ class BookRequest extends FormRequest
         return [
             'name'=>[
                 'required',
-                'unique:books',
             ],
             'quantity'=>[
                 'required',
