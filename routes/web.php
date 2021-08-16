@@ -10,6 +10,7 @@ use App\Http\Controllers\Admin\AuthorController;
 use App\Http\Controllers\Admin\PublisherController;
 use App\Models\Publisher;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -21,24 +22,25 @@ use App\Models\Publisher;
 |
 */
 
-
-
 Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index']);
-
 Route::prefix('/admin')->group(function () {
-    Route::get('/', [AdminController::class, 'home'])->name('admin.home');
-    Route::middleware(['checkAdmin'])->group(function () {
-        Route::resources([
-            'user' => 'Admin\UserController',
-            'category' => 'Admin\CategoryController',
-            'book' => 'Admin\BookController',
-            'author' => 'Admin\AuthorController',
-            'publisher' => 'Admin\PublisherController',
-        ]);
-    });
-    Route::get('/author/export', [AuthorController::class, 'export'])->name('author.export');
-    Route::get('/publisher/export', [PublisherController::class, 'export'])->name('publisher.export');
-    Route::get('/book/export', [BookController::class, 'export'])->name('book.export');
+ Route::get('/', [AdminController::class, 'home'])->name('admin.home');
+ Route::middleware(['checkAdmin'])->group(function () {
+ Route::resources([
+  'user' => 'Admin\UserController',
+  'category' => 'Admin\CategoryController',
+  'book' => 'Admin\BookController',
+  'author' => 'Admin\AuthorController',
+  'publisher' => 'Admin\PublisherController',
+ ]);
 });
-?>
+ Route::get('/author/export', [AuthorController::class, 'export'])->name('author.export');
+ Route::get('/publisher/export', [PublisherController::class, 'export'])->name('publisher.export');
+ Route::get('/book/export', [BookController::class, 'export'])->name('book.export');
+});
+Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
+Route::middleware(['auth'])->group(function () {
+	Route::get('/', 'ViewUserController@index');
+	Route::resource('/homepage',ViewUserController::class);
+});
