@@ -11,8 +11,10 @@ use BenSampo\Enum\Enum;
  */
 final class Status extends Enum
 {
-    const BookInCart =   0;
-    const Approved =   1;
-    const WaitingBook =  2;
-    const BookReturn =  3;  
+    const BookInCart = 0;
+    const Approved =  1;
+    const WaitingBook = 2;
+    const BookReturn = 3;  
+    const BookMiss = 4;
+    const BookWaitingAccept = 5;  
 }

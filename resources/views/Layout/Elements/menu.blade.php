@@ -27,6 +27,21 @@
     </div>
 
     <!-- Nav Item - Pages Collapse Menu -->
+
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse" aria-expanded="true"
+            aria-controls="collapse">
+            <i class="fas fa-fw fa-folder"></i>
+            <span>{{__('message.page6')}}</span>
+        </a>
+        <div id="collapse" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <h6 class="collapse-header">{{__('message.page_manager')}}:</h6>
+                <a class="collapse-item" href="{{route('borrow.create')}}">{{__('message.register_borrow')}}</a>
+            </div>
+        </div>
+    </li>
+
     <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse1" aria-expanded="true"
             aria-controls="collapse1">
@@ -36,7 +51,9 @@
         <div id="collapse1" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <h6 class="collapse-header">{{__('message.page_manager')}}:</h6>
-                <a class="collapse-item" href="blank.html">{{__('message.waiting_book')}}</a>
+                <a class="collapse-item" href="{{route('borrow.index',1)}}">{{__('message.waiting_book')}}</a>
+                <a class="collapse-item" href="{{route('borrow.index',2)}}">{{__('message.waiting_approve')}}</a>
+                <a class="collapse-item" href="{{route('borrow.index',3)}}">{{__('message.book_return')}}</a>
             </div>
         </div>
     </li>
