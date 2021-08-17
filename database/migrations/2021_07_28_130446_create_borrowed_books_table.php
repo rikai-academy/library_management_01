@@ -17,8 +17,9 @@ class CreateBorrowedBooksTable extends Migration
             $table->increments('id');
             $table->integer('quantity');
             $table->integer('status');
-            $table->integer('datetime_borrow');
-            $table->integer('datetime_return');
+            $table->date('datetime_borrow');
+            $table->date('datetime_return');
+            $table->bigInteger('sub_total');
             $table->integer('user_id');
             $table->integer('book_id');
             $table->timestamps();
