@@ -3,7 +3,7 @@
   <ul>
    <li>
     <div class="image">
-     <img src="/css/userhome/images/books.png" alt=""/>
+     <img src="{{asset('/css/userhome/images/books.png')}}" alt=""/>
     </div>
     <div class="details">
      <h2>{{__('public.banner_name')}}</h2>

@@ -5,23 +5,21 @@
 </div>
 <div id="content"><br>
  <div class="products">
-  <h3>{{__('public.book_list')}}</h3>
+  <h3>{{__('public.category')}}: {{$getCategory->name}}</h3>
   <ul>
-  @foreach($userBooks as $ubs)
+   @foreach($bookByCategory as $cate)
    <li> 
     <div class="product">
-     <a href="{{ route('homepage.show', $ubs->id) }}" class="info">
+     <a href="{{ route('homepage.show', $cate->id) }}" class="info">
       <span class="holder">
-       <img src="{{asset('/uploads')}}/{{$ubs->image}}" alt="" />
-       <span class="book-name">{{$ubs->name}}</span>
+       <img src="{{asset('/uploads')}}/{{$cate->image}}" alt="" />
+       <span class="book-name">{{$cate->name}}</span>
       </span>
      </a>
     </div>
    </li>
-  @endforeach
+   @endforeach
   </ul>
  </div>
- <div class="cl">&nbsp;</div>
 </div>
 @endsection
-	

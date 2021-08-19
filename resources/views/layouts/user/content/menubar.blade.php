@@ -1,7 +1,7 @@
 <div id="navigation">
  <ul>
   <li>
-   <a href="#" class="active">{{__('public.home')}}</a>
+   <a href="#">{{__('public.home')}}</a>
   </li>
   <li>
    <a href="#">{{__('public.rental')}}</a>

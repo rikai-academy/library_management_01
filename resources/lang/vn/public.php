@@ -34,6 +34,10 @@ return[
  'input_here'=>'Nhập vào đây...',
  'copy'=>'//https:chuyengiadoclenh.com',
  'access'=>'Chấp Nhận',
- 'total'=>'Tổng'
+ 'total'=>'Tổng',
+ 'new_book'=>'Sách Mới',
+ 'publisher'=>'Nhà Xuất Bản',
+ 'info'=>'Thông Tin Về Tác Giả',
+ 'author_book'=>'Những cuốn sách của tác giả',
 ]
 ?>
