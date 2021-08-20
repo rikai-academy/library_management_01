@@ -38,9 +38,10 @@ Route::prefix('/admin')->group(function () {
             'publisher' => 'Admin\PublisherController',
         ]);
     });
-    Route::get('/author/export', [AuthorController::class, 'export'])->name('author.export');
-    Route::get('/publisher/export', [PublisherController::class, 'export'])->name('publisher.export');
-    Route::get('/book/export', [BookController::class, 'export'])->name('book.export');
+    Route::get('admin/author/export', [AuthorController::class, 'export'])->name('author.export');
+    Route::get('admin/publisher/export', [PublisherController::class, 'export'])->name('publisher.export');
+    Route::get('admin/book/export', [BookController::class, 'export'])->name('book.export');
+    Route::get('admin/user/export', [UserController::class, 'export'])->name('user.export');
 });
 Route::middleware(['auth'])->group(function () {
  Route::get('/', 'ViewUserController@index');

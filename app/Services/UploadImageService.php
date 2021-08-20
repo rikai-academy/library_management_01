@@ -9,6 +9,7 @@ Class UploadImageService{
         $ext = $image->extension();
         $image_result = time() . '-' . 'book.' . $ext;
         $file->move(public_path('uploads'), $image_result);
+
         return $image_result;
     }
 }

@@ -1,18 +1,20 @@
+  
 <!-- Bootstrap core JavaScript-->
-<script src="{{url('public/site')}}/vendor/jquery/jquery.min.js"></script>
-<script src="{{url('public/site')}}/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="{{ asset('site/vendor/jquery/jquery.min.js')}}"></script>
+<script src="{{ asset('site/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
 
 <!-- Core plugin JavaScript-->
-<script src="{{url('public/site')}}/vendor/jquery-easing/jquery.easing.min.js"></script>
+<script src="{{ asset('site/vendor/jquery-easing/jquery.easing.min.js')}}"></script>
 
 <!-- Custom scripts for all pages-->
-<script src="{{url('public/site')}}/js/sb-admin-2.min.js"></script>
+<script src="{{ asset('site/js/sb-admin-2.min.js')}}"></script>
 
 <!-- Page level plugins -->
-<script src="{{url('public/site')}}/vendor/chart.js/Chart.min.js"></script>
+<script src="{{ asset('site/vendor/chart.js/Chart.min.js')}}"></script>
 
 <!-- Page level custom scripts -->
-<script src="{{url('public/site')}}/js/demo/chart-area-demo.js"></script>
-<script src="{{url('public/site')}}/js/demo/chart-pie-demo.js"></script>
-<script src="{{url('public/site')}}/js/detele_form.js"></script>
-<script src="{{url('public/site')}}/js/image.js"></script>
+<script src="{{ asset('site/js/demo/chart-area-demo.js')}}"></script>
+<script src="{{ asset('site/js/demo/chart-pie-demo.js')}}"></script>
+<script src="{{ asset('site/js/detele_form.js')}}"></script>
+<script src="{{ asset('site/js/image.js')}}"></script>
+<script src="{{ asset('site/js/search_select.js')}}"></script>
