@@ -100,5 +100,7 @@ return[
  'logout'=>'Đăng Xuất',
  'profile'=> 'Hồ Sơ',
  'setting'=> 'Chỉnh Sửa',
+ 'delete_all' => 'Xóa Hết',
+ 'sub_total' => 'Tổng giá',
 ]
 ?>

@@ -179,6 +179,7 @@ return [
         App\Providers\BookServiceProvider::class,
         App\Providers\UploadImageServiceProvider::class,
         BenSampo\Enum\EnumServiceProvider::class,
+        App\Providers\BorrowBookProvide::class,
     ],
 
     /*
