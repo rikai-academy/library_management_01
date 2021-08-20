@@ -1023,3 +1023,7 @@ input.qtyminus {
   margin-top: 10px;
   margin-bottom: 20px;
 }
+
+.rent {
+  float: right
+}

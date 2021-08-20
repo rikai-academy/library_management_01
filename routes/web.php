@@ -13,6 +13,7 @@ use App\Models\Publisher;
 use App\Http\Controllers\ViewAuthorController;
 use App\Http\Controllers\ViewCategoryController;
 use App\Http\Controllers\ViewPublisherController;
+use App\Http\Controllers\SearchController;
 
 /*
 |--------------------------------------------------------------------------
@@ -47,16 +48,10 @@ Route::middleware(['auth'])->group(function () {
  Route::get('/author/{author}', [ViewAuthorController::class, 'showAuthor']);
  Route::get('/category/{category}', [ViewCategoryController::class, 'showCategory']);
  Route::get('/publisher/{publisher}', [ViewPublisherController::class, 'showPublisher']);
-});
-
-Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
-Route::middleware(['auth'])->group(function () {
-    Route::get('/', 'ViewUserController@index');
-    Route::resource('/homepage', ViewUserController::class);
-    Route::get('/add/{book_id}',[BookBorrowController::class,'store'])->name('book_borrow_add.store');
-    Route::get('/destroyAll',[BookBorrowController::class,'destroy_all'])->name('book_borrow.destroy_all');
-
-    Route::resources([
-        'book_borrow' => 'BookBorrowController',
-    ]);
+ Route::get('/search',[SearchController::class,'search']);
+ Route::get('/add/{book_id}',[BookBorrowController::class,'store'])->name('book_borrow_add.store');
+ Route::get('/destroyAll',[BookBorrowController::class,'destroy_all'])->name('book_borrow.destroy_all');
+ Route::resources([
+  'book_borrow' => 'BookBorrowController',
+ ]);
 });
