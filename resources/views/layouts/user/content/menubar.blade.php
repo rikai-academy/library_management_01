@@ -1,13 +1,13 @@
 <div id="navigation">
  <ul>
   <li>
-   <a href="#">{{__('public.home')}}</a>
+   <a href="{{route('homepage.index')}}">{{__('public.home')}}</a>
   </li>
   <li>
-   <a href="#">{{__('public.rental')}}</a>
+   <a href="{{route('book_borrow.index')}}">{{__('public.rental')}}</a>
   </li>
   <li>
-   <a href="#">{{__('public.contacts')}}</a>
+   <a href="{{url('contact')}}">{{__('public.contacts')}}</a>
   </li>
   <li> 
    <div class="search-container">

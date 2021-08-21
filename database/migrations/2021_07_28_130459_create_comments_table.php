@@ -11,23 +11,23 @@ class CreateCommentsTable extends Migration
      *
      * @return void
      */
-    public function up()
-    {
-        Schema::create('comments', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('desc_comment');
-            $table->integer('user_id');
-            $table->timestamps();
-        });
-    }
+ public function up()
+ {
+  Schema::create('comments', function (Blueprint $table) {
+   $table->increments('id');
+   $table->string('desc_comment');
+	 $table->integer('user_id');
+	 $table->integer('book_id');
+   $table->timestamps();
+  });
+ }
 
     /**
      * Reverse the migrations.
      *
      * @return void
      */
-    public function down()
-    {
-        Schema::dropIfExists('comments');
-    }
+ public function down(){
+  Schema::dropIfExists('comments');
+ }
 }

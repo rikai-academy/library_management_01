@@ -22,7 +22,7 @@
   </table>
    @livewire('total',['sub_total' => $data_borrow])
   <br>
-  <input type="submit" class="button" value="{{__('public.access')}}" id="rent">
+  <input type="submit" class="button rent" value="{{__('public.access')}}">
  </form>
 </div>
 <div class="cl">&nbsp;</div>

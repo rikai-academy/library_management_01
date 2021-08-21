@@ -8,10 +8,8 @@
    <div class="col store">
     <h4>{{__('public.menu')}}</h4>
     <ul>
-     <li><a href="#">{{__('public.home')}}</a></li>					
-     <li><a href="#">{{__('public.rental')}}</a></li>
-     <li><a href="#">{{__('public.category')}}</a></li>
-     <li><a href="#">{{__('public.author')}}</a></li>
+     <li><a href="{{route('homepage.index')}}">{{__('public.home')}}</a></li>					
+     <li><a href="{{route('book_borrow.index')}}">{{__('public.rental')}}</a></li>
     </ul>
    </div>
    <div class="col" id="newsletter">
@@ -22,7 +20,7 @@
    </div>
    <div class="cl">&nbsp;</div>
    <div class="copy">
-    <p>&copy; <a href="#">{{__('public.copy')}}</a></p>
+    <p>&copy;{{__('public.copy')}}</p>
    </div>
   </div>
  </div>
