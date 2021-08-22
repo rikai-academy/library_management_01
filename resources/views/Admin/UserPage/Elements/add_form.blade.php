@@ -1,7 +1,6 @@
 <form class="user" action="{{route('user.store')}}" method="POST" enctype="multipart/form-data">
         @csrf
-        @include('Admin.UserPage.Elements.message')
-        
+        @include('Admin.UserPage.Elements.message') 
         <div class="row">
             <div class="col">
                 <div class="form-group">

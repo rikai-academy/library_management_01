@@ -15,3 +15,5 @@
 <!-- Custom styles for this template-->
 <link href="{{asset('site/css/sb-admin-2.min.css')}}" rel="stylesheet">
 <link href="{{asset('site/css/btn-image.css')}}" rel="stylesheet">
+<link href="{{asset('site/css/search.css')}}" rel="stylesheet">
+@livewireStyles

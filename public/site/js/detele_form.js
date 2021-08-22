@@ -5,4 +5,7 @@ $('.btndelete').click(function(ev) {
     if (confirm('Bạn Có Chắc Muốn Xóa Không ?')) {
         $('form#form-delete').submit();
     }
+});
+$(document).ready(function() {
+    $('.search_select_box select').selectpicker();
 })

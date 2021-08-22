@@ -18,3 +18,4 @@
 <script src="{{ asset('site/js/detele_form.js')}}"></script>
 <script src="{{ asset('site/js/image.js')}}"></script>
 <script src="{{ asset('site/js/search_select.js')}}"></script>
+@livewireScripts
