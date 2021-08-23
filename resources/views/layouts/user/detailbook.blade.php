@@ -9,7 +9,29 @@
   <div id="detail">
    <img id="detail-img" src="{{asset('/uploads')}}/{{$userBook->image}}">
    <div id="detail-content ">
-    <h1 id="font-1">{{$userBook->name}}</h1>
+    <h1 id="font-1">{{$userBook->name}}</h1><br>
+    <div style="display:flex">
+     <div style="display:flex">	
+      <p>{{__('public.like')}} {{$likes}}</p> &emsp;
+      <p>{{__('public.dislike')}} {{$disLikes}}</p>
+     </div>&ensp;
+     <div>
+      <form action="{{url('/save-likedislike')}}" method="POST" >
+       <input type="hidden" name="_token" value="{{ csrf_token() }}">				
+       <input type="hidden" name="book_id" value="{{$userBook->id}}">	
+       @if ($checkFirst)
+       <input type="submit" name="choice" value="Like"  />
+       <input type="submit" name="choice" value="DisLike" />
+       @else
+       @if ($check)
+       <input type="submit" name="choice" value="DisLike"/>
+       @else
+       <input type="submit" name="choice" value="Like"/>
+       @endif
+       @endif
+      </form>
+     </div>
+    </div>
     <p id="detail-content-b">{{__('public.quote')}}</p>
     <p id="detail-content-p"> {{$userBook->desc}}</p>
    </div>

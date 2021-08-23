@@ -8,6 +8,8 @@ use App\Models\Category;
 use App\Models\Author;
 use App\Models\Publisher;
 use App\Models\Comment;
+use App\Models\Like;
+
 class ViewUserController extends Controller
 {
  public function __construct()
@@ -35,6 +37,20 @@ class ViewUserController extends Controller
    $userBook = Book::with('author')->find($id);
 	 $books = Book::orderBy('created_at','DESC')->take(7)->get();
 	 $comment = Comment::latest()->get();
-   return view('layouts.user.detailbook',compact('userBook','books','comment'));
+	 $check = null;
+	 $checkFirst = null;
+	 $likes = Like::SumLike($id);
+	 $disLikes = Like::SumDislike($id);
+	 if(Like::CheckLike($id)->exists()) {
+		$check=true;
+		$checkFirst=false;
+   }else if(Like::CheckDislike($id)->exists()) {
+	  $check=false;
+	  $checkFirst=false;
+   }
+   else{
+	  $checkFirst=true;
+   }
+   return view('layouts.user.detailbook',compact('userBook','books','comment','check','checkFirst','likes','disLikes'));
   }
 }
