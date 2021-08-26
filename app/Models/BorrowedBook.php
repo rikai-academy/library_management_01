@@ -2,6 +2,8 @@
 
 namespace App\Models;
 
+use App\Enums\Status;
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -29,4 +31,10 @@ class BorrowedBook extends Model
         return $this->belongsTo("App\Models\User", "user_id", "id");
     }
 
+    public function scopeExpirationBorrow($query)
+    {
+        $expDate = Carbon::now()->addDay(11);
+        $query =  $query->whereDate('datetime_return','<', $expDate)->where('status',Status::Approved)->get();
+        return $query;
+    }
 }
