@@ -79,6 +79,7 @@ class BorrowBookController extends Controller
     public function approve_borrow_book($user_id)
     {
         $approve_all =  $this->rentalService->approve_borrow_book($user_id);
+        
         if ($approve_all) {
             return redirect(route('borrow.index', Status::WaitingBook))->with('success', __('message.approve_success'));
         } else {
@@ -174,4 +175,16 @@ class BorrowBookController extends Controller
             return back()->with('fail', __('message.fail'));
         }
     }
+
+    public function reject_all($user_id)
+    {
+        $reject_all = $this->rentalService->reject_all($user_id);
+        if ($reject_all) {
+            return redirect(route('borrow.index', 6))->with('success', __('message.approve_success'));
+        } else {
+            return back()->with('fail', __('message.fail'));
+        }
+    }
+
+
 }
