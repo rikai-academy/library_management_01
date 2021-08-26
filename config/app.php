@@ -161,8 +161,8 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
-				Maatwebsite\Excel\ExcelServiceProvider::class,
-				App\Providers\HelperServiceProvider::class,
+        Maatwebsite\Excel\ExcelServiceProvider::class,
+        App\Providers\HelperServiceProvider::class,
 
         /*
          * Package Service Providers...
@@ -183,6 +183,7 @@ return [
         App\Providers\StatusBorrowServiceProvider::class,
         App\Providers\RentalServiceProvider::class,
         App\Providers\SendMailServiceProvider::class,
+        App\Providers\LoginFBServiceProvider::class,
     ],
 
     /*
