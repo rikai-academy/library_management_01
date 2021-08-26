@@ -7,5 +7,12 @@
  <script src = "{{ asset('/js/userhome/jquery.jcarousel.min.js') }}"></script>
  <script src = "{{ asset('/js/userhome/functions.js') }}"></script>
  <script src = "{{ asset('/js/userhome/script.js') }}"></script>
+ @isset($og_fb)
+ <meta property="og:url" content="{{$og_fb['url_page']}}"/>
+ <meta property="og:description" content="{{$og_fb['title_book']}}" />
+ <meta property="og:image" content="{{$og_fb['image_book']}}" />
+ <meta property="og:title" content="{{$og_fb['name_book']}}" />
+ <meta property="og:type" content="article" />
+ @endisset
  @livewireStyles 
 </head>
