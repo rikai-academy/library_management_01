@@ -3,8 +3,11 @@
 namespace App\Console;
 
 use App\Console\Commands\SendBorrowExpiryEmail;
+use App\Enums\Status;
+use Carbon\Carbon;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
+use Illuminate\Support\Facades\DB;
 
 class Kernel extends ConsoleKernel
 {
@@ -26,6 +29,9 @@ class Kernel extends ConsoleKernel
     protected function schedule(Schedule $schedule)
     {
         $schedule->command('word:day')->daily();
+        $schedule->call(function () {
+            DB::table('borrowed_books')->where([['status', '=', Status::Approved],['datetime_borrow', '=', Carbon::now()->subMonthsNoOverflow()->endOfMonth()->subMinutes(1)->toDateTimeString()]])->delete();
+        })->lastDayOfMonth('23:59');
     }
 
     /**

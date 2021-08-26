@@ -46,7 +46,6 @@ class StatisticController extends Controller
     public function show(Request $request)
     {
         if ($request->ajax()) {
-
             $subDate = Carbon::now()->subDay($request->day_select)->format('Y-m-d');
             $day_chart = BorrowedBook::whereBetween('datetime_return', [$subDate, Carbon::now()->format('Y-m-d')])->pluck('datetime_return')->toArray();
 
