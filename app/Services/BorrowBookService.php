@@ -10,6 +10,10 @@ use Illuminate\Support\Facades\DB;
 use App\Enums\Status;
 
 Class BorrowBookService{
+    public function __construct()
+    {
+        $this->sendMail = new SendMailService; 
+    }
     public function add_borrow_book($book_id){
         try{
             if(Auth::check()){
@@ -42,7 +46,7 @@ Class BorrowBookService{
         $book_borrow['sub_total'] = $price *  $book_borrow['quantity'];
 
         $add_borrow = BorrowedBook::create($book_borrow);
-    
+
         if($add_borrow){
             return redirect(route('book_borrow.index'));
         }else{
@@ -80,6 +84,7 @@ Class BorrowBookService{
                 DB::table('borrowed_books')->whereIn('id', [$check_borrow[$i]->id])->where('status', Status::BookInCart)->update(['status' => Status::WaitingBook,'datetime_borrow'=> Carbon::now(),'datetime_return' => $datetime_return]);
                 DB::commit();
             }
+                $this->sendMail->sendMail(Auth()->id(),Status::WaitingBook);
         }catch(Exception $e){
             DB::rollBack();
             throw new Exception($e->getMessage());

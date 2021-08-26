@@ -151,5 +151,15 @@ return[
  'email_user_borrow'=>'Email Người Thuê : ',
  'select_email'=>'Chọn Email ',
  'full_name'=> 'Họ Tên : ',
+ 'title_thanks'=> 'Thư Cảm Ơn Của Library ĐN',
+ 'thank1' => 'Cảm Ơn',
+ 'thank2' => 'Đã Sử Dụng Dịch Của Hệ Thống Thư Viện ĐN',
+ 'mess_email_approve'=>'Dưới Đây Là Sách Bạn Đã Đăng Kí Thuê Sách Tại Hệ Thống, Vui Lòng Đến Thư Viện Sách Tại 123 Nguyễn Văn Linh - Hải Châu - ĐN Để Lấy Sách Sớm Nhất',
+ 'attention' => '*Khi Đi Vui Lòng Cầm Theo CMND',
+ 'quest' =>'Mọi Thắc Mắc Xin Liên Hệ Gmail',
+ 'gmail' => 'LibraryDN@gmail.com',
+ 'mess_email_waiting' => 'Dưới Đây Là Sách Bạn Đã Đăng Kí Thuê Sách Tại Hệ Thống, Vui Lòng Chờ Xác Nhận Và Kiểm Tra Thông Tin Từ Phía Hệ Thống, Sẽ Có Mail Gửi Tới Bạn Sớm Nhất Có Thể',
+ 'reject_all'=> 'Từ Chối Tất Cả',
+ 'mess_email_reject'=> 'Xin Lỗi Vì Sự Bất Tiện Này, Nhưng Có Vẻ Thư Viện Đã Hết Sách Mà Bạn Yêu Cầu !!',
 ]
 ?>
