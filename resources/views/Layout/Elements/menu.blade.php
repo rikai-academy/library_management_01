@@ -134,6 +134,20 @@
         </div>
     </li>
 
+    <li class="nav-item">
+        <a class="nav-link" href="#" data-toggle="collapse" data-target="#collapse8" aria-expanded="true"
+            aria-controls="collapse8">
+            <i class="fas fa-fw fa-folder"></i>
+            <span>{{__('message.page8')}}</span>
+        </a>
+        <div id="collapse8" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <h6 class="collapse-header">{{__('message.page_manager')}}:</h6>
+                <a class="collapse-item" href="{{route('statistic.index')}}">{{__('message.page8')}}</a>
+            </div>
+        </div>
+    </li>
+
     <!-- Divider -->
     <hr class="sidebar-divider d-none d-md-block">
 
