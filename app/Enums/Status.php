@@ -17,4 +17,5 @@ final class Status extends Enum
     const BookReturn = 3;  
     const BookMiss = 4;
     const BookWaitingAccept = 5;  
+    const Reject = 6;  
 }

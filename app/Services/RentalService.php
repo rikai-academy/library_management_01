@@ -12,7 +12,10 @@ use Illuminate\Support\Facades\DB;
 
 class RentalService
 {
-
+    public function __construct()
+    {
+        $this->sendMail = new SendMailService; 
+    }
     // Save many record borrow
     public function store_borrow(BorrowRequest $request)
     {
@@ -56,6 +59,7 @@ class RentalService
                 $approve_all = DB::table('borrowed_books')->whereIn('id', [$data_borrow[$i]->id])->where('status', Status::WaitingBook)->update(['status' => Status::Approved]);
                 DB::commit();
             }
+            $this->sendMail->sendMail(Auth()->id(),Status::Approved);
         } catch (Exception $e) {
             DB::rollBack();
             throw new Exception($e->getMessage());
@@ -149,5 +153,23 @@ class RentalService
             throw new Exception($e->getMessage());
         }
         return $return_all;
+    }
+
+    public function reject_all($user_id){
+
+        $data_borrow = BorrowedBook::where([['user_id', $user_id], ['status', Status::WaitingBook]])->get();
+
+        DB::beginTransaction();
+        try {
+            for ($i = 0; $i < count($data_borrow); $i++) {
+                $reject_all = DB::table('borrowed_books')->whereIn('id', [$data_borrow[$i]->id])->where('status', Status::WaitingBook)->update(['status' => Status::Reject]);
+                DB::commit();
+            }
+            $this->sendMail->sendMail(Auth()->id(),Status::Reject);
+        } catch (Exception $e) {
+            DB::rollBack();
+            throw new Exception($e->getMessage());
+        }
+        return $reject_all;
     }
 }

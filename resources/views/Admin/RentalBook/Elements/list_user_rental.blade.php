@@ -95,6 +95,13 @@
                 </span>
                 <span class="text">{{__('message.approve_all')}}</span>
             </a>
+            <a href="{{route('borrow.reject_all',$borrow->User->id)}}"
+                class="btn btn-danger btn-icon-split btn_float_right">
+                <span class="icon text-white-50">
+                    <i class="far fa-trash-alt"></i>
+                </span>
+                <span class="text">{{__('message.reject_all')}}</span>
+            </a>
         </td>
     </tr>
 </table>
