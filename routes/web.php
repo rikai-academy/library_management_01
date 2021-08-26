@@ -78,6 +78,7 @@ Route::prefix('/admin')->group(function () {
         Route::get('admin/borrow/destroy/{borrow}', [BorrowBookController::class, 'destroy_borrow'])->name('borrow.destroy_borrow');
         Route::get('admin/borrow/refuse_all/{user_id}', [BorrowBookController::class, 'refuse_all'])->name('borrow.refuse_all');
         Route::get('admin/borrow/accept_book_all/{user_id}', [BorrowBookController::class, 'accept_book_all'])->name('borrow.accept_book_all');
+        Route::get('admin/borrow/reject_all/{user_id}', [BorrowBookController::class, 'reject_all'])->name('borrow.reject_all');
     });
 });
 
