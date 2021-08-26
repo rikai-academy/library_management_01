@@ -161,5 +161,6 @@ return[
  'mess_email_waiting' => 'Dưới Đây Là Sách Bạn Đã Đăng Kí Thuê Sách Tại Hệ Thống, Vui Lòng Chờ Xác Nhận Và Kiểm Tra Thông Tin Từ Phía Hệ Thống, Sẽ Có Mail Gửi Tới Bạn Sớm Nhất Có Thể',
  'reject_all'=> 'Từ Chối Tất Cả',
  'mess_email_reject'=> 'Xin Lỗi Vì Sự Bất Tiện Này, Nhưng Có Vẻ Thư Viện Đã Hết Sách Mà Bạn Yêu Cầu !!',
+ 'fb' => 'Đăng Nhập FB',
 ]
 ?>

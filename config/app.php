@@ -183,7 +183,7 @@ return [
         App\Providers\StatusBorrowServiceProvider::class,
         App\Providers\RentalServiceProvider::class,
         App\Providers\SendMailServiceProvider::class,
-        Barryvdh\DomPDF\ServiceProvider::class,
+        Laravel\Socialite\SocialiteServiceProvider::class,
     ],
 
     /*
@@ -239,6 +239,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'Excel' => Maatwebsite\Excel\Facades\Excel::class,
         'Menu' => App\Helpers\Helper\Menu::class,
+        'Socialite' => Laravel\Socialite\Facades\Socialite::class,
     ],
 
 ];
