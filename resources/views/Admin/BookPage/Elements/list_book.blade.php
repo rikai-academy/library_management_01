@@ -7,7 +7,7 @@
     <td>{{$book->publisher->name}}</td>
     <td>{{$book->category->name}}</td>
     <td>{{$book->author->name}}</td>
-    <td><img style="width: 50px; height: 50px;" src="{{url('public/uploads/')}}/{{$book->image}}" alt=""></td> 
+    <td><img style="width: 50px; height: 50px;" src="{{ asset('uploads')}}/{{$book->image}}" alt=""></td> 
     <td style="width: 214px;">
         <a style="float: left" href="{{route('book.edit',$book->id)}}"
             class="btn btn-info btn-icon-split">

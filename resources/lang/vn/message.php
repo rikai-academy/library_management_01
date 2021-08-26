@@ -180,5 +180,7 @@ return[
  'one_month' => '1 Tháng Trước',
  'one_year'=>'1 Năm Trước',
  'statistic_table' => 'Bảng Thống Kê',
+ 'tags' => 'Gắn Thẻ',
+ 'tag_key' => 'Từ Khóa Liên Quan',
 ]
 ?>

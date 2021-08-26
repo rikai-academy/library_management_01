@@ -40,4 +40,10 @@ class ViewUserController extends Controller
     $comment = Comment::latest()->get();
     return view('layouts.user.detailbook', compact('userBook', 'books', 'comment','open_graph_face_book'));
   }
+
+  public function tags($tags_key)
+  {
+    $book_tags = Book::where('name','LIKE','%'.$tags_key.'%')->orWhere('tags','LIKE','%'.$tags_key.'%')->get();
+    return view('layouts.user.tags', compact('book_tags'));
+  }
 }

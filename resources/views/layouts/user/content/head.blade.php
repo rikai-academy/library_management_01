@@ -6,6 +6,7 @@
  <script src = "{{ asset('/js/userhome/jquery-1.6.2.min.js') }}"></script>
  <script src = "{{ asset('/js/userhome/jquery.jcarousel.min.js') }}"></script>
  <script src = "{{ asset('/js/userhome/functions.js') }}"></script>
+ <link href="{{ asset('site/vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
  <script src = "{{ asset('/js/userhome/script.js') }}"></script>
  @isset($og_fb)
  <meta property="og:url" content="{{$open_graph_face_book['url_page']}}"/>

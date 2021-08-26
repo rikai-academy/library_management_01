@@ -18,7 +18,7 @@ use App\Http\Controllers\ViewCategoryController;
 use App\Http\Controllers\ViewPublisherController;
 use App\Http\Controllers\SearchController;
 use App\Http\Controllers\CommentUserController;
-
+use App\Http\Controllers\ViewUserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -42,6 +42,7 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/comment', [CommentUserController::class, 'store']);
     Route::get('/add/{book_id}', [BookBorrowController::class, 'store'])->name('book_borrow_add.store');
     Route::get('/destroyAll', [BookBorrowController::class, 'destroy_all'])->name('book_borrow.destroy_all');
+    Route::get('/tags/{tag}', [ViewUserController::class, 'tags'])->name('tags.tag');
     Route::resources([
         'book_borrow' => 'BookBorrowController',
     ]);
