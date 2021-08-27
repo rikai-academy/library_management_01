@@ -182,6 +182,7 @@ return [
         App\Providers\BorrowBookProvide::class,
         App\Providers\StatusBorrowServiceProvider::class,
         App\Providers\RentalServiceProvider::class,
+        App\Providers\SendMailServiceProvider::class,
     ],
 
     /*
@@ -235,8 +236,8 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
-		'Excel' => Maatwebsite\Excel\Facades\Excel::class,
-		'Menu' => App\Helpers\Helper\Menu::class,
+        'Excel' => Maatwebsite\Excel\Facades\Excel::class,
+        'Menu' => App\Helpers\Helper\Menu::class,
     ],
 
 ];
