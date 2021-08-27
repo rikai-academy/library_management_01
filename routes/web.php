@@ -9,6 +9,7 @@ use App\Http\Controllers\Admin\BookController;
 use App\Http\Controllers\Admin\AuthorController;
 use App\Http\Controllers\Admin\BorrowBookController;
 use App\Http\Controllers\Admin\PublisherController;
+use App\Http\Controllers\Auth\LoginFBController;
 use App\Http\Controllers\BookBorrowController;
 use App\Models\Publisher;
 use App\Http\Controllers\ViewAuthorController;
@@ -49,6 +50,8 @@ Route::middleware(['auth'])->group(function () {
 });
 
 Auth::routes();
+Route::get('/auth/redirect/{provider}', [LoginFBController::class, 'redirect'])->name('loginFB.redirect');
+Route::get('/callback/{provider}', [LoginFBController::class, 'callback'])->name('loginFB.callback');
 Route::prefix('/admin')->group(function () {
     Route::get('/', [AdminController::class, 'home'])->name('admin.home');
     Route::middleware(['checkAdmin'])->group(function () {
