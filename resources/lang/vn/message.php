@@ -163,5 +163,9 @@ return[
  'mess_email_reject'=> 'Xin Lỗi Vì Sự Bất Tiện Này, Nhưng Có Vẻ Thư Viện Đã Hết Sách Mà Bạn Yêu Cầu !!',
  'fb' => 'Đăng Nhập FB',
  'subject' => 'Hệ Thống Thư Viện ĐN',
+ 'title_notification'=> 'Thông Báo Của Library ĐN',
+ 'dear' => 'Kính Gửi',
+ 'mess_notification' => 'Thời Hạn Thuê Sách Của Bạn Sắp Hết Vào Ngày',
+ 'attention2' => '*Khi Đi Vui Lòng Cầm Theo Sách Để Trả Và CMND Để Đối Chiếu',
 ]
 ?>
