@@ -12,16 +12,12 @@
             labels: date_time,
             datasets: [{
                     label: 'Số Lượng Sách',
-                    backgroundColor: "pink",
                     data: quantity,
-                    fill: true,
                     yAxisID: 'y-axis-1',
                 },
                 {
                     label: 'Doanh Thu',
-                    backgroundColor: "blue",
                     data: sum_price,
-                    fill: true,
                     yAxisID: 'y-axis-2',
                 },
             ],
@@ -46,7 +42,7 @@
                     responsive: true,
                     title: {
                         display: true,
-                        text: 'Yearly User Joined'
+                        text: 'Doanh Thu Sách'
                     },
                     animation: {
                         onComplete: () => {
