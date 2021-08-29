@@ -167,5 +167,6 @@ return[
  'dear' => 'Kính Gửi',
  'mess_notification' => 'Thời Hạn Thuê Sách Của Bạn Sắp Hết Vào Ngày',
  'attention2' => '*Khi Đi Vui Lòng Cầm Theo Sách Để Trả Và CMND Để Đối Chiếu',
+ 'page8'=>'Thống Kê',
 ]
 ?>

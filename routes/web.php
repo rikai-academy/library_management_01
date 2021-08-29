@@ -62,6 +62,7 @@ Route::prefix('/admin')->group(function () {
             'author' => 'Admin\AuthorController',
             'publisher' => 'Admin\PublisherController',
             'borrow' => 'Admin\BorrowBookController',
+            'statistic' => 'Admin\StatisticController',
         ]);
         Route::get('admin/author/export', [AuthorController::class, 'export'])->name('author.export');
         Route::get('admin/publisher/export', [PublisherController::class, 'export'])->name('publisher.export');
