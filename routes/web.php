@@ -9,6 +9,7 @@ use App\Http\Controllers\Admin\BookController;
 use App\Http\Controllers\Admin\AuthorController;
 use App\Http\Controllers\Admin\BorrowBookController;
 use App\Http\Controllers\Admin\PublisherController;
+use App\Http\Controllers\Admin\StatisticController;
 use App\Http\Controllers\Auth\LoginFBController;
 use App\Http\Controllers\BookBorrowController;
 use App\Models\Publisher;
@@ -83,6 +84,7 @@ Route::prefix('/admin')->group(function () {
         Route::get('admin/borrow/refuse_all/{user_id}', [BorrowBookController::class, 'refuse_all'])->name('borrow.refuse_all');
         Route::get('admin/borrow/accept_book_all/{user_id}', [BorrowBookController::class, 'accept_book_all'])->name('borrow.accept_book_all');
         Route::get('admin/borrow/reject_all/{user_id}', [BorrowBookController::class, 'reject_all'])->name('borrow.reject_all');
+        Route::post('admin/statistic/load', [StatisticController::class, 'load_day'])->name('statistic.load_day');
     });
 });
 

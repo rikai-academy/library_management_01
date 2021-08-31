@@ -18,4 +18,7 @@
 <script src="{{ asset('site/js/detele_form.js')}}"></script>
 <script src="{{ asset('site/js/image.js')}}"></script>
 <script src="{{ asset('site/js/search_select.js')}}"></script>
+<script src="{{ asset('site/js/jquery.js')}}"></script>
+<script src="{{ asset('site/js/statistical.js')}}"></script>
+<script src="{{ asset('site/js/chart.min.js')}}"></script>
 @livewireScripts

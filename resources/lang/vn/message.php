@@ -168,5 +168,17 @@ return[
  'mess_notification' => 'Thời Hạn Thuê Sách Của Bạn Sắp Hết Vào Ngày',
  'attention2' => '*Khi Đi Vui Lòng Cầm Theo Sách Để Trả Và CMND Để Đối Chiếu',
  'page8'=>'Thống Kê',
+ 'statistic_borrow'=> 'Thống Kê Sách Đang Thuê',
+ 'statistic_return'=> 'Thống Kê Sách Đã Trả',
+ 'select_date' => 'Lọc Kết Quả : ',
+ 'date_1'=> 'Từ Ngày',
+ 'date_2' => 'Ngày',
+ 'to'=> 'Tới',
+ 'book_waiting'=> 'Sách Chờ Duyệt',
+ 'book_waiting_return'=> 'Sách Chưa Trả',
+ 'one_week' => '1 Tuần Trước',
+ 'one_month' => '1 Tháng Trước',
+ 'one_year'=>'1 Năm Trước',
+ 'statistic_table' => 'Bảng Thống Kê',
 ]
 ?>
