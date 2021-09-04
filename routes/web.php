@@ -10,6 +10,7 @@ use App\Http\Controllers\Admin\AuthorController;
 use App\Http\Controllers\Admin\BorrowBookController;
 use App\Http\Controllers\Admin\PublisherController;
 use App\Http\Controllers\Admin\StatisticController;
+use App\Http\Controllers\Admin\SearchAdminController;
 use App\Http\Controllers\Auth\LoginFBController;
 use App\Http\Controllers\BookBorrowController;
 use App\Models\Publisher;
@@ -38,7 +39,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/author/{author}', [ViewAuthorController::class, 'showAuthor']);
     Route::get('/category/{category}', [ViewCategoryController::class, 'showCategory']);
     Route::get('/publisher/{publisher}', [ViewPublisherController::class, 'showPublisher']);
-    Route::get('/search', [SearchController::class, 'search']);
+    Route::get('/search', [SearchAdminController::class, 'searchUser'])->name('search.user');
     Route::post('/comment', [CommentUserController::class, 'store']);
     Route::get('/add/{book_id}', [BookBorrowController::class, 'store'])->name('book_borrow_add.store');
     Route::get('/destroyAll', [BookBorrowController::class, 'destroy_all'])->name('book_borrow.destroy_all');
@@ -65,6 +66,7 @@ Route::prefix('/admin')->group(function () {
             'publisher' => 'Admin\PublisherController',
             'borrow' => 'Admin\BorrowBookController',
             'statistic' => 'Admin\StatisticController',
+            'search' => 'Admin\SearchAdminController',
         ]);
         Route::get('admin/author/export', [AuthorController::class, 'export'])->name('author.export');
         Route::get('admin/publisher/export', [PublisherController::class, 'export'])->name('publisher.export');
@@ -85,6 +87,7 @@ Route::prefix('/admin')->group(function () {
         Route::get('admin/borrow/refuse_all/{user_id}', [BorrowBookController::class, 'refuse_all'])->name('borrow.refuse_all');
         Route::get('admin/borrow/accept_book_all/{user_id}', [BorrowBookController::class, 'accept_book_all'])->name('borrow.accept_book_all');
         Route::get('admin/borrow/reject_all/{user_id}', [BorrowBookController::class, 'reject_all'])->name('borrow.reject_all');
+        Route::get('admin/search-results/', [SearchAdminController::class, 'search'])->name('search.result');
     });
 });
 

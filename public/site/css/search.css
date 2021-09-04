@@ -531,3 +531,7 @@ select.selectpicker {
     width: 100%;
     float: none
 }
+
+.btn_search {
+    width: 150px;
+}

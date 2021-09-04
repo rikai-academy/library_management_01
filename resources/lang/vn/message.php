@@ -182,5 +182,9 @@ return[
  'statistic_table' => 'Bảng Thống Kê',
  'tags' => 'Gắn Thẻ',
  'tag_key' => 'Từ Khóa Liên Quan',
+ 'search_title_sr' => 'Xin Lỗi, Không Thể Tìm Thấy Dữ Liệu Cho Từ Khóa',
+ 'count_search' => 'Có ',
+ 'search_key' => ' Kết Quả Cho Từ Khóa',
+ 'detail_search' => 'Chi Tiết',
 ]
 ?>

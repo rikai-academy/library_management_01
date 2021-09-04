@@ -6,8 +6,10 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Spatie\Searchable\Searchable;
+use Spatie\Searchable\SearchResult;
 
-class User extends Authenticatable
+class User extends Authenticatable implements Searchable
 {
     use HasFactory, Notifiable;
 
@@ -74,5 +76,16 @@ class User extends Authenticatable
             $query = $query->where('name','like','%'.$name.'%');
         }
         return $query;
+    }
+
+    public function getSearchResult(): SearchResult
+    {
+        $url = route('user.index', $this->name);
+
+        return new SearchResult(
+            $this,
+            $this->name,
+            $url
+        );
     }
 }

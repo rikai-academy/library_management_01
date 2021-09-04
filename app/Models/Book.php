@@ -4,8 +4,10 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Spatie\Searchable\Searchable;
+use Spatie\Searchable\SearchResult;
 
-class Book extends Model
+class Book extends Model implements Searchable
 {
     use HasFactory;
 
@@ -21,7 +23,7 @@ class Book extends Model
         'tags',
     ];
 
-		protected $with = ['category','Author'];
+    protected $with = ['category', 'Author'];
     public function category()
     {
         return $this->belongsTo("App\Models\Category", "category_id", "id");
@@ -61,18 +63,31 @@ class Book extends Model
     {
         return $this->hasMany("App\Models\BookFollow", "book_id", "id");
     }
-    
+
     public function scopeLoadByNameBook($query)
     {
-        if($name = request()->name){
-            $query = $query->where('name','like','%'.$name.'%');
+        if ($name = request()->name) {
+            $query = $query->where('name', 'like', '%' . $name . '%');
         }
         return $query;
-		}
-		public function scopeSearch($query){
-		 if(isset( $_GET['query'])){
-		 $search_text=$_GET['query'];
-		 return $query->where('name','LIKE','%'.$search_text.'%');
-		}
-	}
+    }
+    public function scopeSearch($query)
+    {
+        if (isset($_GET['query'])) {
+            $search_text = $_GET['query'];
+            return $query->where('name', 'LIKE', '%' . $search_text . '%');
+        }
+    }
+    public function getSearchResult(): SearchResult
+    {
+        $url = route('book.index', $this->name);
+        $url_user = route('book.index', $this->id);
+        return new SearchResult(
+            $this,
+            $this->name,
+            $url,
+            $url_user,
+            $this->image,
+        );
+    }
 }
