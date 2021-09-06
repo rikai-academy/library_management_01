@@ -13,6 +13,7 @@ Class BorrowBookService{
     public function __construct()
     {
         $this->sendMail = new SendMailService; 
+        $this->notify = new NotifyService; 
     }
     public function add_borrow_book($book_id){
         try{
@@ -46,7 +47,6 @@ Class BorrowBookService{
         $book_borrow['sub_total'] = $price *  $book_borrow['quantity'];
 
         $add_borrow = BorrowedBook::create($book_borrow);
-
         if($add_borrow){
             return redirect(route('book_borrow.index'));
         }else{
@@ -85,6 +85,7 @@ Class BorrowBookService{
                 DB::commit();
             }
                 $this->sendMail->sendMail(Auth()->id(),Status::WaitingBook);
+                $this->notify->create_notify(Auth()->id());
         }catch(Exception $e){
             DB::rollBack();
             throw new Exception($e->getMessage());

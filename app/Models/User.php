@@ -70,6 +70,11 @@ class User extends Authenticatable implements Searchable
         return $this->hasMany("App\Models\BorrowedBook", "user_id", "id");
     }
 
+    public function Notify()
+    {
+        return $this->hasMany("App\Models\Notification");
+    }
+
     public function scopeLoadByNameUser($query)
     {
         if($name = request()->name){

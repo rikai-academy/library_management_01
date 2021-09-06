@@ -186,5 +186,8 @@ return[
  'count_search' => 'Có ',
  'search_key' => ' Kết Quả Cho Từ Khóa',
  'detail_search' => 'Chi Tiết',
+ 'notify_mess' => 'Đã Đăng Kí Thuê Sách',
+ 'notify' => 'Thông Báo',
+ 'all_notify' => 'Tất Cả Thông Báo'
 ]
 ?>

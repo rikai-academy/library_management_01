@@ -19,4 +19,5 @@
   @include('Layout.Elements.js')
   <link href="{{ asset('site/css/bootstrap-tagsinput.css') }}" rel="stylesheet">
   <meta name="csrf-token" content="{{ csrf_token() }}">
+  @include('Layout.Elements.js')
   @livewireStyles
