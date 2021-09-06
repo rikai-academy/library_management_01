@@ -30,7 +30,8 @@ class Category extends Model implements Searchable
 
     public function getSearchResult(): SearchResult
     {
-        $url = route('category.index', $this->name);
+        $name_category = 'name='.$this->name;
+        $url = route('category.index', $name_category);
         $url_user = route('category.index', $this->id);
         return new SearchResult(
             $this,

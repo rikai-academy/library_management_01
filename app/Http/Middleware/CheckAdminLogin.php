@@ -18,12 +18,14 @@ class CheckAdminLogin
      */
     public function handle(Request $request, Closure $next)
     {
-        if(Auth::check())
-        {
-            if(Auth::user()->role_id == UserRole::ADMIN)  return $next($request);
-            else return redirect()->route('admin.home');
-        }else{
+        if (Auth::check()) {
+            if (Auth::user()->role_id == 1) {
+                return $next($request);
+            } else {
+                return redirect()->route('home');
+            }
+        } else {
             return redirect()->route('login');
-        }     
+        }
     }
 }

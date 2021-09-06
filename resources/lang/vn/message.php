@@ -188,6 +188,8 @@ return[
  'detail_search' => 'Chi Tiết',
  'notify_mess' => 'Đã Đăng Kí Thuê Sách',
  'notify' => 'Thông Báo',
- 'all_notify' => 'Tất Cả Thông Báo'
+ 'all_notify' => 'Tất Cả Thông Báo',
+ 'new_comment' => 'Đã Có 1 Comment Mới Với Sách Mà Bạn Đã Quan Tâm',
+ 'go_to' => 'Đi Đến Comment',
 ]
 ?>

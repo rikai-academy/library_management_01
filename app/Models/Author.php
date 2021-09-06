@@ -36,7 +36,8 @@ class Author extends Model implements Searchable
 
     public function getSearchResult(): SearchResult
     {
-        $url = route('author.index', $this->name);
+        $name_author = 'name='.$this->name;
+        $url = route('author.index',$name_author);
         $url_user = route('author.index', $this->id);
         return new SearchResult(
             $this,

@@ -86,7 +86,7 @@
         </div>
         
         <div class="col">
-            <img style="width: 205px; height: 275px;" src="{{asset('uploads')}}/{{$book->image}}" id="block" class="rounded mx-auto d-block " alt="...">
+            <img style="width: 205px; height: 275px;" src="{{secure_asset('uploads')}}/{{$book->image}}" id="block" class="rounded mx-auto d-block " alt="...">
             
             <div class="form-group" style="margin: 100px 0px 0px 130px;">
                 <input type="file" placeholder="Ảnh đại diện" accept=".png, .jpg, .jpeg, .gif" name="image" value="{{$book->image}}"

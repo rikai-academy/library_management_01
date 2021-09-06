@@ -68,7 +68,7 @@
         </div>
         
         <div class="col">
-            <img src="{{url('public/uploads/')}}/{{$user->image_user}}" id="block" class="rounded mx-auto d-block image_add_user" alt="...">
+            <img src="{{ secure_asset('uploads')}}/{{$user->image_user}}" id="block" class="rounded mx-auto d-block image_add_user" alt="...">
             
             <div class="form-group button_image_user">
                 <input type="file" placeholder="Ảnh đại diện" accept=".png, .jpg, .jpeg, .gif" name="image_user"

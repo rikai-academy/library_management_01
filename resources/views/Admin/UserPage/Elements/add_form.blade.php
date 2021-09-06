@@ -65,7 +65,7 @@
             </div>
             
             <div class="col">
-                <img src="{{ asset('uploads/none-avatar.jpg')}}" id="block" class="rounded mx-auto d-block image_add_user" alt="...">
+                <img src="{{ secure_asset('uploads/none-avatar.jpg')}}" id="block" class="rounded mx-auto d-block image_add_user" alt="...">
                 <div class="form-group button_image_user">
                     <input type="file" placeholder="Ảnh đại diện" accept=".png, .jpg, .jpeg, .gif" name="image_user"
                         onchange="loadFile_avt(event)">

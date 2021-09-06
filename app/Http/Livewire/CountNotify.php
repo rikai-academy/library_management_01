@@ -15,7 +15,7 @@ class CountNotify extends Component
     
     public function render()
     {
-        $count_notify = Notification::count();
+        $count_notify = Notification::where('status',0)->count();
         return view('livewire.count-notify', compact('count_notify'));
     }
 }
