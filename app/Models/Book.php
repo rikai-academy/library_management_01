@@ -80,7 +80,8 @@ class Book extends Model implements Searchable
     }
     public function getSearchResult(): SearchResult
     {
-        $url = route('book.index', $this->name);
+        $name_book = 'name='.$this->name;
+        $url = route('book.index', $name_book);
         $url_user = route('book.index', $this->id);
         return new SearchResult(
             $this,

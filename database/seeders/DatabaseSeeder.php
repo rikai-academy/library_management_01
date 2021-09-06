@@ -11,6 +11,9 @@ class DatabaseSeeder extends Seeder
     {
         DB::insert('insert into roles (id, role_name) values (?, ?)', [1, 'ADMIN']);
         DB::insert('insert into roles (id, role_name) values (?, ?)', [2, 'USER']);
+        $this->call([
+            UserSeeder::class,
+        ]);
     }
     
 }

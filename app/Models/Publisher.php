@@ -31,7 +31,8 @@ class Publisher extends Model implements Searchable
 
     public function getSearchResult(): SearchResult
     {
-        $url = route('publisher.index', $this->name);
+        $name_publisher = 'name='.$this->name;
+        $url = route('publisher.index', $name_publisher);
         $url_user = route('publisher.index', $this->id);
         return new SearchResult(
             $this,

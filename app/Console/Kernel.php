@@ -28,7 +28,7 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        $schedule->command('word:day')->daily();
+        $schedule->command('word:day')->everyMinute();
         $schedule->call(function () {
             DB::table('borrowed_books')->where([['status', '=', Status::Approved],['datetime_borrow', '=', Carbon::now()->subMonthsNoOverflow()->endOfMonth()->subMinutes(1)->toDateTimeString()]])->delete();
         })->lastDayOfMonth('23:59');
