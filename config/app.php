@@ -186,6 +186,7 @@ return [
         App\Providers\LoginFBServiceProvider::class,
         Laravel\Socialite\SocialiteServiceProvider::class,
         App\Providers\SearchServiceProvider::class,
+        App\Providers\NotifyServiceProvider::class,
     ],
 
     /*

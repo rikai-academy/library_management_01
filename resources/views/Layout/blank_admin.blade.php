@@ -49,7 +49,7 @@
     <a class="scroll-to-top rounded" href="#page-top">
         <i class="fas fa-angle-up"></i>
     </a>
-    @include('Layout.Elements.js')
+    <script src="{{ asset('site/js/detele_form.js') }}"></script>
 </body>
 
 </html>
