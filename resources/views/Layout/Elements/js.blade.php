@@ -21,4 +21,5 @@
 <script src="{{ asset('site/js/jquery.js')}}"></script>
 <script src="{{ asset('site/js/statistical.js')}}"></script>
 <script src="{{ asset('site/js/chart.min.js')}}"></script>
+<script src="{{ asset('site/js/bootstrap-tagsinput.js')}}"></script>
 @livewireScripts

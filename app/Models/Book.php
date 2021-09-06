@@ -18,8 +18,8 @@ class Book extends Model
         'author_id',
         'image',
         'desc',
+        'tags',
     ];
-
 
 		protected $with = ['category','Author'];
     public function category()

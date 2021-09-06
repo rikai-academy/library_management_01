@@ -20,6 +20,7 @@ class CreateBooksTable extends Migration
             $table->string('desc')->nullable();
             $table->bigInteger('price');
             $table->string('image');
+            $table->string('tags')->nullable();
             $table->integer('publisher_id');
             $table->integer('category_id');
             $table->integer('comment_id')->nullable();

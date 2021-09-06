@@ -17,5 +17,6 @@
   <link href="{{ asset('site/css/search.css') }}" rel="stylesheet">
   <link href="{{ asset('site/css/jqueryui.css') }}" rel="stylesheet">
   @include('Layout.Elements.js')
+  <link href="{{ asset('site/css/bootstrap-tagsinput.css') }}" rel="stylesheet">
   <meta name="csrf-token" content="{{ csrf_token() }}">
   @livewireStyles
