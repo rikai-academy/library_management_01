@@ -4,8 +4,10 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Spatie\Searchable\Searchable;
+use Spatie\Searchable\SearchResult;
 
-class Category extends Model
+class Category extends Model implements Searchable
 {
     use HasFactory;
 
@@ -24,5 +26,17 @@ class Category extends Model
             $query = $query->where('name','like','%'.$name.'%');
         }
         return $query;
+    }
+
+    public function getSearchResult(): SearchResult
+    {
+        $url = route('category.index', $this->name);
+        $url_user = route('category.index', $this->id);
+        return new SearchResult(
+            $this,
+            $this->name,
+            $url,
+            $url_user
+        );
     }
 }
