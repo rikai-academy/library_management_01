@@ -9,6 +9,7 @@ use App\Http\Controllers\Admin\BookController;
 use App\Http\Controllers\Admin\AuthorController;
 use App\Http\Controllers\Admin\BorrowBookController;
 use App\Http\Controllers\Admin\PublisherController;
+use App\Http\Controllers\Admin\StatisticController;
 use App\Http\Controllers\Auth\LoginFBController;
 use App\Http\Controllers\BookBorrowController;
 use App\Models\Publisher;
@@ -62,6 +63,7 @@ Route::prefix('/admin')->group(function () {
             'author' => 'Admin\AuthorController',
             'publisher' => 'Admin\PublisherController',
             'borrow' => 'Admin\BorrowBookController',
+            'statistic' => 'Admin\StatisticController',
         ]);
         Route::get('admin/author/export', [AuthorController::class, 'export'])->name('author.export');
         Route::get('admin/publisher/export', [PublisherController::class, 'export'])->name('publisher.export');
