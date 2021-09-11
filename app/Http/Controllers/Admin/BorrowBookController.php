@@ -22,7 +22,7 @@ class BorrowBookController extends Controller
 
     public function index($status)
     {
-        $data_borrow = BorrowedBook::where('status', $status)->distinct()->get(['user_id']);
+        $data_borrow = BorrowedBook::where('status', $status) ->get(['user_id']);
         return view('Admin.RentalBook.rental', compact('data_borrow', 'status'));
     }
 

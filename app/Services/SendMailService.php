@@ -45,6 +45,8 @@ class SendMailService
         });
     }
 
+
+
     public function sendMailComment($user_data,$book_id)
     {
         for ($i = 0; $i < count($user_data); $i++) {
